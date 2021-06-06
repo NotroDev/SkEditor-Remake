@@ -1,0 +1,9 @@
+C:\Users\T@L@R\Documents\Visual Studio 2010\Projects\SkEditor\SkEditor\obj\x86\Release\SkEditor.Properties.Resources.resources
+C:\Users\T@L@R\Documents\Visual Studio 2010\Projects\SkEditor\SkEditor\obj\x86\Release\SkEditor.csproj.GenerateResource.Cache
+C:\Users\T@L@R\Documents\Visual Studio 2010\Projects\SkEditor\SkEditor\bin\Release\SkEditor.exe.config
+C:\Users\T@L@R\Documents\Visual Studio 2010\Projects\SkEditor\SkEditor\obj\x86\Release\SkEditor.Form1.resources
+C:\Users\T@L@R\Documents\Visual Studio 2010\Projects\SkEditor\SkEditor\obj\x86\Release\SkEditor.SkEditor.resources
+C:\Users\Komputer\Desktop\Michał\SkEditor\SkEditor\obj\x86\Release\SkEditor.Properties.Resources.resources
+C:\Users\Komputer\Desktop\Michał\SkEditor\SkEditor\obj\x86\Release\SkEditor.SkEditor.resources
+C:\Users\Komputer\Desktop\Michał\SkEditor\SkEditor\obj\x86\Release\SkEditor.csproj.GenerateResource.cache
+C:\Users\Komputer\Desktop\Michał\SkEditor\SkEditor\obj\x86\Release\SkEditor.csproj.CoreCompileInputs.cache
