@@ -60,6 +60,9 @@ namespace SkEditor
 
         private void SkEditor_Load(object sender, EventArgs e)
         {
+
+            menuStrip1.Renderer = new CustomProfessionalRenderer();
+
             Directory.CreateDirectory("C:\\ProgramData\\SkEditor\\");
             versionLabel.Text = version;
             int fileCount = Directory.GetFiles(@"C:\ProgramData\SkEditor\").Length;
@@ -208,9 +211,10 @@ namespace SkEditor
                 joinDiscordToolStripMenuItem.Text = "Dołącz na naszego discorda";
                 ourWebsiteToolStripMenuItem.Text = "Nasza strona internetowa";
                 aboutSkEditorToolStripMenuItem.Text = "O SkEditorze";
-                Home.Text = "Strona Główna";
-                Editor.Text = "Edytor";
-                welcomeLabel.Text = "Witaj w SkEditorze!";
+                homeButton.Text = "Strona Główna";
+                editorButton.Text = "Edytor";
+                welcomeLabel.Text = "Witaj w SkEditor Remake!";
+                subWelcomeLabel.Text = "Jest to wersja testowa. W razie problemu możesz napisać do twórcy na Discord - Notro#3737";
                 toolStripButton12.Text = "Szukaj";
                 toolStripButton13.Text = "Szukaj i zamień";
                 findToolStripMenuItem.Text = "Szukaj";
@@ -256,9 +260,10 @@ namespace SkEditor
                 joinDiscordToolStripMenuItem.Text = "Join Discord";
                 ourWebsiteToolStripMenuItem.Text = "Our Website";
                 aboutSkEditorToolStripMenuItem.Text = "About SkEditor";
-                Home.Text = "Home";
-                Editor.Text = "Editor";
-                welcomeLabel.Text = "Welcome to SkEditor!";
+                homeButton.Text = "Home";
+                editorButton.Text = "Editor";
+                welcomeLabel.Text = "Welcome to SkEditor Remake!";
+                subWelcomeLabel.Text = "This is a test version. In case of bug or problem, you can write to author on Discord - Notro#3737";
                 toolStripButton12.Text = "Find";
                 toolStripButton13.Text = "Find and replace";
                 findToolStripMenuItem.Text = "Find";

@@ -32,10 +32,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.versionLabel = new System.Windows.Forms.Label();
-            this.Editor = new System.Windows.Forms.Button();
-            this.Home = new System.Windows.Forms.Button();
+            this.editorButton = new System.Windows.Forms.Button();
+            this.homeButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.subNameLabel = new System.Windows.Forms.Label();
+            this.skEditorLogo = new System.Windows.Forms.PictureBox();
             this.nameLabel = new System.Windows.Forms.Label();
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -97,11 +98,11 @@
             this.joinDiscordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ourWebsiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutSkEditorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.subNameLabel = new System.Windows.Forms.Label();
+            this.subWelcomeLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.skEditorLogo)).BeginInit();
             this.panel3.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -111,8 +112,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.Editor);
-            this.panel1.Controls.Add(this.Home);
+            this.panel1.Controls.Add(this.editorButton);
+            this.panel1.Controls.Add(this.homeButton);
             this.panel1.Controls.Add(this.panel2);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
@@ -129,36 +130,42 @@
             this.versionLabel.ForeColor = System.Drawing.Color.White;
             this.versionLabel.Name = "versionLabel";
             // 
-            // Editor
+            // editorButton
             // 
-            resources.ApplyResources(this.Editor, "Editor");
-            this.Editor.ForeColor = System.Drawing.Color.White;
-            this.Editor.Name = "Editor";
-            this.Editor.UseVisualStyleBackColor = false;
-            this.Editor.Click += new System.EventHandler(this.Editor_Click);
+            resources.ApplyResources(this.editorButton, "editorButton");
+            this.editorButton.ForeColor = System.Drawing.Color.White;
+            this.editorButton.Name = "editorButton";
+            this.editorButton.UseVisualStyleBackColor = false;
+            this.editorButton.Click += new System.EventHandler(this.Editor_Click);
             // 
-            // Home
+            // homeButton
             // 
-            resources.ApplyResources(this.Home, "Home");
-            this.Home.ForeColor = System.Drawing.Color.White;
-            this.Home.Name = "Home";
-            this.Home.UseVisualStyleBackColor = false;
-            this.Home.Click += new System.EventHandler(this.Home_Click);
+            resources.ApplyResources(this.homeButton, "homeButton");
+            this.homeButton.ForeColor = System.Drawing.Color.White;
+            this.homeButton.Name = "homeButton";
+            this.homeButton.UseVisualStyleBackColor = false;
+            this.homeButton.Click += new System.EventHandler(this.Home_Click);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.subNameLabel);
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.skEditorLogo);
             this.panel2.Controls.Add(this.nameLabel);
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
-            // pictureBox1
+            // subNameLabel
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Image = global::SkEditor.Properties.Resources.Skript_Code_Editor_Icon2;
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
+            resources.ApplyResources(this.subNameLabel, "subNameLabel");
+            this.subNameLabel.ForeColor = System.Drawing.Color.White;
+            this.subNameLabel.Name = "subNameLabel";
+            // 
+            // skEditorLogo
+            // 
+            resources.ApplyResources(this.skEditorLogo, "skEditorLogo");
+            this.skEditorLogo.Image = global::SkEditor.Properties.Resources.Skript_Code_Editor_Icon2;
+            this.skEditorLogo.Name = "skEditorLogo";
+            this.skEditorLogo.TabStop = false;
             // 
             // nameLabel
             // 
@@ -190,6 +197,7 @@
             // 
             this.toolStrip1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2,
@@ -218,7 +226,7 @@
             // toolStripButton1
             // 
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::SkEditor.Properties.Resources.plus_3_16;
+            this.toolStripButton1.Image = global::SkEditor.Properties.Resources.new_file;
             resources.ApplyResources(this.toolStripButton1, "toolStripButton1");
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
@@ -226,7 +234,7 @@
             // toolStripButton2
             // 
             this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::SkEditor.Properties.Resources.folder_8_16;
+            this.toolStripButton2.Image = global::SkEditor.Properties.Resources.open_file;
             resources.ApplyResources(this.toolStripButton2, "toolStripButton2");
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
@@ -234,7 +242,7 @@
             // toolStripButton3
             // 
             this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = global::SkEditor.Properties.Resources.save_16;
+            this.toolStripButton3.Image = global::SkEditor.Properties.Resources.save_file;
             resources.ApplyResources(this.toolStripButton3, "toolStripButton3");
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
@@ -242,7 +250,7 @@
             // toolStripButton4
             // 
             this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = global::SkEditor.Properties.Resources.x_mark_2_16;
+            this.toolStripButton4.Image = global::SkEditor.Properties.Resources.close_file;
             resources.ApplyResources(this.toolStripButton4, "toolStripButton4");
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
@@ -250,7 +258,7 @@
             // toolStripButton5
             // 
             this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = global::SkEditor.Properties.Resources.x_mark_5_16;
+            this.toolStripButton5.Image = global::SkEditor.Properties.Resources.close_all;
             resources.ApplyResources(this.toolStripButton5, "toolStripButton5");
             this.toolStripButton5.Name = "toolStripButton5";
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
@@ -263,7 +271,7 @@
             // toolStripButton11
             // 
             this.toolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton11.Image = global::SkEditor.Properties.Resources.favicon;
+            this.toolStripButton11.Image = global::SkEditor.Properties.Resources.pastebin;
             resources.ApplyResources(this.toolStripButton11, "toolStripButton11");
             this.toolStripButton11.Name = "toolStripButton11";
             this.toolStripButton11.Click += new System.EventHandler(this.toolStripButton11_Click);
@@ -276,7 +284,7 @@
             // toolStripButton6
             // 
             this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = global::SkEditor.Properties.Resources.scissors_7_16;
+            this.toolStripButton6.Image = global::SkEditor.Properties.Resources.cut;
             resources.ApplyResources(this.toolStripButton6, "toolStripButton6");
             this.toolStripButton6.Name = "toolStripButton6";
             this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
@@ -284,7 +292,7 @@
             // toolStripButton7
             // 
             this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton7.Image = global::SkEditor.Properties.Resources.text_file_4_16;
+            this.toolStripButton7.Image = global::SkEditor.Properties.Resources.copy_file;
             resources.ApplyResources(this.toolStripButton7, "toolStripButton7");
             this.toolStripButton7.Name = "toolStripButton7";
             this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
@@ -292,7 +300,7 @@
             // toolStripButton8
             // 
             this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton8.Image = global::SkEditor.Properties.Resources.clipboard_4_16;
+            this.toolStripButton8.Image = global::SkEditor.Properties.Resources.paste_file;
             resources.ApplyResources(this.toolStripButton8, "toolStripButton8");
             this.toolStripButton8.Name = "toolStripButton8";
             this.toolStripButton8.Click += new System.EventHandler(this.toolStripButton8_Click);
@@ -305,7 +313,7 @@
             // toolStripButton9
             // 
             this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton9.Image = global::SkEditor.Properties.Resources.undo_16;
+            this.toolStripButton9.Image = global::SkEditor.Properties.Resources.undo_b;
             resources.ApplyResources(this.toolStripButton9, "toolStripButton9");
             this.toolStripButton9.Name = "toolStripButton9";
             this.toolStripButton9.Click += new System.EventHandler(this.toolStripButton9_Click);
@@ -313,7 +321,7 @@
             // toolStripButton10
             // 
             this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton10.Image = global::SkEditor.Properties.Resources.redo_16;
+            this.toolStripButton10.Image = global::SkEditor.Properties.Resources.redo_b;
             resources.ApplyResources(this.toolStripButton10, "toolStripButton10");
             this.toolStripButton10.Name = "toolStripButton10";
             this.toolStripButton10.Click += new System.EventHandler(this.toolStripButton10_Click);
@@ -326,7 +334,7 @@
             // toolStripButton12
             // 
             this.toolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton12.Image = global::SkEditor.Properties.Resources.search_15_16;
+            this.toolStripButton12.Image = global::SkEditor.Properties.Resources.search;
             resources.ApplyResources(this.toolStripButton12, "toolStripButton12");
             this.toolStripButton12.Name = "toolStripButton12";
             this.toolStripButton12.Click += new System.EventHandler(this.toolStripButton12_Click);
@@ -334,7 +342,7 @@
             // toolStripButton13
             // 
             this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton13.Image = global::SkEditor.Properties.Resources.repeat_16;
+            this.toolStripButton13.Image = global::SkEditor.Properties.Resources.replace;
             resources.ApplyResources(this.toolStripButton13, "toolStripButton13");
             this.toolStripButton13.Name = "toolStripButton13";
             this.toolStripButton13.Click += new System.EventHandler(this.toolStripButton13_Click);
@@ -347,7 +355,7 @@
             // toolStripButton14
             // 
             this.toolStripButton14.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton14.Image = global::SkEditor.Properties.Resources.zoom_in_16;
+            this.toolStripButton14.Image = global::SkEditor.Properties.Resources.zoom_in;
             resources.ApplyResources(this.toolStripButton14, "toolStripButton14");
             this.toolStripButton14.Name = "toolStripButton14";
             this.toolStripButton14.Click += new System.EventHandler(this.toolStripButton14_Click);
@@ -355,13 +363,14 @@
             // toolStripButton15
             // 
             this.toolStripButton15.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton15.Image = global::SkEditor.Properties.Resources.zoom_out_16;
+            this.toolStripButton15.Image = global::SkEditor.Properties.Resources.zoom_out;
             resources.ApplyResources(this.toolStripButton15, "toolStripButton15");
             this.toolStripButton15.Name = "toolStripButton15";
             this.toolStripButton15.Click += new System.EventHandler(this.toolStripButton15_Click);
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
@@ -389,21 +398,21 @@
             // 
             // newToolStripMenuItem
             // 
-            this.newToolStripMenuItem.Image = global::SkEditor.Properties.Resources.plus_3_16;
+            this.newToolStripMenuItem.Image = global::SkEditor.Properties.Resources.new_file;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             resources.ApplyResources(this.newToolStripMenuItem, "newToolStripMenuItem");
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
-            this.openToolStripMenuItem.Image = global::SkEditor.Properties.Resources.folder_8_16;
+            this.openToolStripMenuItem.Image = global::SkEditor.Properties.Resources.open_file;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             resources.ApplyResources(this.openToolStripMenuItem, "openToolStripMenuItem");
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
-            this.saveToolStripMenuItem.Image = global::SkEditor.Properties.Resources.save_16;
+            this.saveToolStripMenuItem.Image = global::SkEditor.Properties.Resources.save_file;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             resources.ApplyResources(this.saveToolStripMenuItem, "saveToolStripMenuItem");
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
@@ -415,7 +424,7 @@
             // 
             // pastebinToolStripMenuItem
             // 
-            this.pastebinToolStripMenuItem.Image = global::SkEditor.Properties.Resources.favicon;
+            this.pastebinToolStripMenuItem.Image = global::SkEditor.Properties.Resources.pastebin;
             this.pastebinToolStripMenuItem.Name = "pastebinToolStripMenuItem";
             resources.ApplyResources(this.pastebinToolStripMenuItem, "pastebinToolStripMenuItem");
             this.pastebinToolStripMenuItem.Click += new System.EventHandler(this.pastebinToolStripMenuItem_Click);
@@ -427,21 +436,21 @@
             // 
             // closeToolStripMenuItem
             // 
-            this.closeToolStripMenuItem.Image = global::SkEditor.Properties.Resources.x_mark_2_16;
+            this.closeToolStripMenuItem.Image = global::SkEditor.Properties.Resources.close_file;
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
             resources.ApplyResources(this.closeToolStripMenuItem, "closeToolStripMenuItem");
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
             // closeAllToolStripMenuItem
             // 
-            this.closeAllToolStripMenuItem.Image = global::SkEditor.Properties.Resources.x_mark_5_16;
+            this.closeAllToolStripMenuItem.Image = global::SkEditor.Properties.Resources.close_all;
             this.closeAllToolStripMenuItem.Name = "closeAllToolStripMenuItem";
             resources.ApplyResources(this.closeAllToolStripMenuItem, "closeAllToolStripMenuItem");
             this.closeAllToolStripMenuItem.Click += new System.EventHandler(this.closeAllToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
-            this.exitToolStripMenuItem.Image = global::SkEditor.Properties.Resources.exit_16;
+            this.exitToolStripMenuItem.Image = global::SkEditor.Properties.Resources.exit;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
@@ -463,21 +472,21 @@
             // 
             // cutToolStripMenuItem
             // 
-            this.cutToolStripMenuItem.Image = global::SkEditor.Properties.Resources.scissors_7_16;
+            this.cutToolStripMenuItem.Image = global::SkEditor.Properties.Resources.cut;
             this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
             resources.ApplyResources(this.cutToolStripMenuItem, "cutToolStripMenuItem");
             this.cutToolStripMenuItem.Click += new System.EventHandler(this.cutToolStripMenuItem_Click);
             // 
             // copyToolStripMenuItem
             // 
-            this.copyToolStripMenuItem.Image = global::SkEditor.Properties.Resources.text_file_4_16;
+            this.copyToolStripMenuItem.Image = global::SkEditor.Properties.Resources.copy_file;
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             resources.ApplyResources(this.copyToolStripMenuItem, "copyToolStripMenuItem");
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
             // pasteToolStripMenuItem
             // 
-            this.pasteToolStripMenuItem.Image = global::SkEditor.Properties.Resources.clipboard_4_16;
+            this.pasteToolStripMenuItem.Image = global::SkEditor.Properties.Resources.paste_file;
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
             resources.ApplyResources(this.pasteToolStripMenuItem, "pasteToolStripMenuItem");
             this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
@@ -489,14 +498,14 @@
             // 
             // undoToolStripMenuItem
             // 
-            this.undoToolStripMenuItem.Image = global::SkEditor.Properties.Resources.undo_16;
+            this.undoToolStripMenuItem.Image = global::SkEditor.Properties.Resources.undo_b;
             this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
             resources.ApplyResources(this.undoToolStripMenuItem, "undoToolStripMenuItem");
             this.undoToolStripMenuItem.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
             // 
             // redoToolStripMenuItem
             // 
-            this.redoToolStripMenuItem.Image = global::SkEditor.Properties.Resources.redo_16;
+            this.redoToolStripMenuItem.Image = global::SkEditor.Properties.Resources.redo_b;
             this.redoToolStripMenuItem.Name = "redoToolStripMenuItem";
             resources.ApplyResources(this.redoToolStripMenuItem, "redoToolStripMenuItem");
             this.redoToolStripMenuItem.Click += new System.EventHandler(this.redoToolStripMenuItem_Click);
@@ -508,14 +517,14 @@
             // 
             // findToolStripMenuItem
             // 
-            this.findToolStripMenuItem.Image = global::SkEditor.Properties.Resources.search_15_16;
+            this.findToolStripMenuItem.Image = global::SkEditor.Properties.Resources.search;
             this.findToolStripMenuItem.Name = "findToolStripMenuItem";
             resources.ApplyResources(this.findToolStripMenuItem, "findToolStripMenuItem");
             this.findToolStripMenuItem.Click += new System.EventHandler(this.findToolStripMenuItem_Click);
             // 
             // replaceToolStripMenuItem
             // 
-            this.replaceToolStripMenuItem.Image = global::SkEditor.Properties.Resources.repeat_16;
+            this.replaceToolStripMenuItem.Image = global::SkEditor.Properties.Resources.replace;
             this.replaceToolStripMenuItem.Name = "replaceToolStripMenuItem";
             resources.ApplyResources(this.replaceToolStripMenuItem, "replaceToolStripMenuItem");
             this.replaceToolStripMenuItem.Click += new System.EventHandler(this.replaceToolStripMenuItem_Click);
@@ -534,7 +543,7 @@
             this.modeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lightToolStripMenuItem,
             this.darkToolStripMenuItem});
-            this.modeToolStripMenuItem.Image = global::SkEditor.Properties.Resources.light_bulb_16;
+            this.modeToolStripMenuItem.Image = global::SkEditor.Properties.Resources.change_theme;
             this.modeToolStripMenuItem.Name = "modeToolStripMenuItem";
             resources.ApplyResources(this.modeToolStripMenuItem, "modeToolStripMenuItem");
             // 
@@ -557,7 +566,7 @@
             this.languageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.englishToolStripMenuItem,
             this.polskiToolStripMenuItem});
-            this.languageToolStripMenuItem.Image = global::SkEditor.Properties.Resources.book_stack_16;
+            this.languageToolStripMenuItem.Image = global::SkEditor.Properties.Resources.language;
             this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
             resources.ApplyResources(this.languageToolStripMenuItem, "languageToolStripMenuItem");
             // 
@@ -580,7 +589,7 @@
             this.panelToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.enabledToolStripMenuItem,
             this.disabledToolStripMenuItem});
-            this.panelToolStripMenuItem.Image = global::SkEditor.Properties.Resources.left_navigation_toolbar_16;
+            this.panelToolStripMenuItem.Image = global::SkEditor.Properties.Resources.menu;
             this.panelToolStripMenuItem.Name = "panelToolStripMenuItem";
             resources.ApplyResources(this.panelToolStripMenuItem, "panelToolStripMenuItem");
             // 
@@ -615,27 +624,29 @@
             // 
             // joinDiscordToolStripMenuItem
             // 
+            this.joinDiscordToolStripMenuItem.Image = global::SkEditor.Properties.Resources.discord_logo;
             this.joinDiscordToolStripMenuItem.Name = "joinDiscordToolStripMenuItem";
             resources.ApplyResources(this.joinDiscordToolStripMenuItem, "joinDiscordToolStripMenuItem");
             this.joinDiscordToolStripMenuItem.Click += new System.EventHandler(this.joinDiscordToolStripMenuItem_Click);
             // 
             // ourWebsiteToolStripMenuItem
             // 
+            this.ourWebsiteToolStripMenuItem.Image = global::SkEditor.Properties.Resources.website;
             this.ourWebsiteToolStripMenuItem.Name = "ourWebsiteToolStripMenuItem";
             resources.ApplyResources(this.ourWebsiteToolStripMenuItem, "ourWebsiteToolStripMenuItem");
             this.ourWebsiteToolStripMenuItem.Click += new System.EventHandler(this.ourWebsiteToolStripMenuItem_Click);
             // 
             // aboutSkEditorToolStripMenuItem
             // 
+            this.aboutSkEditorToolStripMenuItem.Image = global::SkEditor.Properties.Resources.about;
             this.aboutSkEditorToolStripMenuItem.Name = "aboutSkEditorToolStripMenuItem";
             resources.ApplyResources(this.aboutSkEditorToolStripMenuItem, "aboutSkEditorToolStripMenuItem");
             this.aboutSkEditorToolStripMenuItem.Click += new System.EventHandler(this.aboutSkEditorToolStripMenuItem_Click);
             // 
-            // subNameLabel
+            // subWelcomeLabel
             // 
-            resources.ApplyResources(this.subNameLabel, "subNameLabel");
-            this.subNameLabel.ForeColor = System.Drawing.Color.White;
-            this.subNameLabel.Name = "subNameLabel";
+            resources.ApplyResources(this.subWelcomeLabel, "subWelcomeLabel");
+            this.subWelcomeLabel.Name = "subWelcomeLabel";
             // 
             // SkEditorOld
             // 
@@ -643,6 +654,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.welcomeLabel);
+            this.Controls.Add(this.subWelcomeLabel);
             this.Controls.Add(this.panel1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "SkEditorOld";
@@ -652,7 +664,7 @@
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.skEditorLogo)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -666,10 +678,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button Editor;
-        private System.Windows.Forms.Button Home;
+        private System.Windows.Forms.Button editorButton;
+        private System.Windows.Forms.Button homeButton;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox skEditorLogo;
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Label welcomeLabel;
         private System.Windows.Forms.Panel panel3;
@@ -734,5 +746,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton14;
         private System.Windows.Forms.ToolStripButton toolStripButton15;
         private System.Windows.Forms.Label subNameLabel;
+        private System.Windows.Forms.Label subWelcomeLabel;
     }
 }

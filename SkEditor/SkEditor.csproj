@@ -53,7 +53,8 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\SkEditor.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>
@@ -106,6 +107,7 @@
     <Compile Include="AboutSkEditorRemake.Designer.cs">
       <DependentUpon>AboutSkEditorRemake.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomProfessionalRenderer.cs" />
     <Compile Include="DarkBackColor.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -167,11 +169,6 @@
     <None Include="Resources\left-navigation-toolbar-16.png" />
     <None Include="Resources\x-mark-16.png" />
     <None Include="Resources\favicon.ico" />
-    <None Include="Resources\Skript Code Editor Icon2.png" />
-    <None Include="Resources\Skript-Code-Editor-Icon2ico.ico" />
-    <None Include="Resources\Skript-Code-Editor-Icon.ico" />
-    <None Include="Resources\SkEditor.ico" />
-    <None Include="Resources\SkEditor.png" />
     <None Include="Resources\search-15-16.png" />
     <None Include="Resources\repeat-16.png" />
     <None Include="Resources\zoom-in-16.png" />
@@ -193,6 +190,34 @@
     <None Include="Resources\undo-161.png" />
     <None Include="Resources\search-15-161.png" />
     <None Include="Resources\repeat-161.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\SkEditor.ico" />
+    <None Include="Resources\SkEditor.png" />
+    <None Include="Resources\Skript Code Editor Icon2.png" />
+    <None Include="Resources\Skript-Code-Editor-Icon.ico" />
+    <None Include="Resources\Skript-Code-Editor-Icon2ico.ico" />
+    <None Include="Resources\undo-b.png" />
+    <None Include="Resources\change-theme.png" />
+    <None Include="Resources\close-all.png" />
+    <None Include="Resources\close-file.png" />
+    <None Include="Resources\copy-file.png" />
+    <None Include="Resources\cut.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\language.png" />
+    <None Include="Resources\menu.png" />
+    <None Include="Resources\new-file.png" />
+    <None Include="Resources\open-file.png" />
+    <None Include="Resources\paste-file.png" />
+    <None Include="Resources\redo-b.png" />
+    <None Include="Resources\replace.png" />
+    <None Include="Resources\save-file.png" />
+    <None Include="Resources\pastebin.png" />
+    <None Include="Resources\zoom-out.png" />
+    <None Include="Resources\zoom-in.png" />
+    <None Include="Resources\about.png" />
+    <None Include="Resources\discord.png" />
+    <None Include="Resources\website.png" />
+    <None Include="Resources\discord-logo.png" />
     <Content Include="Skript-Code-Editor-Icon.ico" />
   </ItemGroup>
   <ItemGroup>
