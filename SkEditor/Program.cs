@@ -15,7 +15,7 @@ namespace SkEditor
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SkEditor());
+            Application.Run(new SkEditorOld());
         }
     }
 }

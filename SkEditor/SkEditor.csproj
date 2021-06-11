@@ -102,18 +102,16 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutSkEditorRemake.cs" />
+    <Compile Include="AboutSkEditorRemake.Designer.cs">
+      <DependentUpon>AboutSkEditorRemake.cs</DependentUpon>
+    </Compile>
     <Compile Include="DarkBackColor.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SkEditor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SkEditor.Designer.cs">
-      <DependentUpon>SkEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -123,8 +121,8 @@
     <Compile Include="SkEditorOld.Designer.cs">
       <DependentUpon>SkEditorOld.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SkEditor.resx">
-      <DependentUpon>SkEditor.cs</DependentUpon>
+    <EmbeddedResource Include="AboutSkEditorRemake.resx">
+      <DependentUpon>AboutSkEditorRemake.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

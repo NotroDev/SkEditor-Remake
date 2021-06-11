@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SkEditorOld));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.versionLabel = new System.Windows.Forms.Label();
             this.Editor = new System.Windows.Forms.Button();
             this.Home = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.welcomeLabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -97,6 +97,7 @@
             this.joinDiscordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ourWebsiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutSkEditorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.subNameLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -118,15 +119,15 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.versionLabel);
             resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
-            // label3
+            // versionLabel
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Name = "label3";
+            resources.ApplyResources(this.versionLabel, "versionLabel");
+            this.versionLabel.ForeColor = System.Drawing.Color.White;
+            this.versionLabel.Name = "versionLabel";
             // 
             // Editor
             // 
@@ -146,8 +147,9 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.subNameLabel);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.nameLabel);
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
@@ -158,16 +160,16 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // nameLabel
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.nameLabel, "nameLabel");
+            this.nameLabel.ForeColor = System.Drawing.Color.White;
+            this.nameLabel.Name = "nameLabel";
             // 
-            // label2
+            // welcomeLabel
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            resources.ApplyResources(this.welcomeLabel, "welcomeLabel");
+            this.welcomeLabel.Name = "welcomeLabel";
             // 
             // panel3
             // 
@@ -629,15 +631,21 @@
             resources.ApplyResources(this.aboutSkEditorToolStripMenuItem, "aboutSkEditorToolStripMenuItem");
             this.aboutSkEditorToolStripMenuItem.Click += new System.EventHandler(this.aboutSkEditorToolStripMenuItem_Click);
             // 
-            // SkEditor
+            // subNameLabel
+            // 
+            resources.ApplyResources(this.subNameLabel, "subNameLabel");
+            this.subNameLabel.ForeColor = System.Drawing.Color.White;
+            this.subNameLabel.Name = "subNameLabel";
+            // 
+            // SkEditorOld
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.welcomeLabel);
             this.Controls.Add(this.panel1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "SkEditor";
+            this.Name = "SkEditorOld";
             this.Load += new System.EventHandler(this.SkEditor_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -652,7 +660,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -663,8 +670,8 @@
         private System.Windows.Forms.Button Home;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.Label welcomeLabel;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
@@ -695,7 +702,7 @@
         private System.Windows.Forms.ToolStripMenuItem lightToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem darkToolStripMenuItem;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label versionLabel;
         private System.Windows.Forms.ToolStripMenuItem panelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem enabledToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem disabledToolStripMenuItem;
@@ -726,5 +733,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripButton toolStripButton14;
         private System.Windows.Forms.ToolStripButton toolStripButton15;
+        private System.Windows.Forms.Label subNameLabel;
     }
 }

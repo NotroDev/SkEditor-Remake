@@ -7,3 +7,8 @@ C:\Users\Komputer\Desktop\Michał\SkEditor\SkEditor\obj\x86\Release\SkEditor.Pro
 C:\Users\Komputer\Desktop\Michał\SkEditor\SkEditor\obj\x86\Release\SkEditor.SkEditor.resources
 C:\Users\Komputer\Desktop\Michał\SkEditor\SkEditor\obj\x86\Release\SkEditor.csproj.GenerateResource.cache
 C:\Users\Komputer\Desktop\Michał\SkEditor\SkEditor\obj\x86\Release\SkEditor.csproj.CoreCompileInputs.cache
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Release\SkEditor.csprojAssemblyReference.cache
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Release\SkEditor.Properties.Resources.resources
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Release\SkEditor.SkEditorOld.resources
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Release\SkEditor.csproj.GenerateResource.cache
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Release\SkEditor.csproj.CoreCompileInputs.cache

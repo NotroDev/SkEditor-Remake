@@ -20,7 +20,7 @@ namespace SkEditor
 {
     public partial class SkEditorOld : Form
     {
-        public string version = "1.6.3 Hotfix-3";
+        public string version = "1.0.0";
 
         public static class Environment
         {
@@ -30,24 +30,6 @@ namespace SkEditor
         public SkEditorOld()
         {
             InitializeComponent();
-            WebClient webclient = new WebClient();
-            if (!webclient.DownloadString("https://pastebin.com/raw/nYdZUkvT").Equals(version))
-            {
-                if (Properties.Settings.Default.Lang == "Polish")
-                {
-                    if (MessageBox.Show("Jest dostępna aktualizacja! Czy chcesz ją pobrać?", "SkEditor", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-                    {
-                        System.Diagnostics.Process.Start(webclient.DownloadString("https://pastebin.com/raw/jexXDzjM"));
-                    }
-                }
-                else
-                {
-                    if (MessageBox.Show("An update is available! Do you want to download it?", "SkEditor", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-                    {
-                        System.Diagnostics.Process.Start("https://github.com/MichixYT/SkEditor/releases/latest/");
-                    }
-                }
-            }
         }
 
 
@@ -79,7 +61,7 @@ namespace SkEditor
         private void SkEditor_Load(object sender, EventArgs e)
         {
             Directory.CreateDirectory("C:\\ProgramData\\SkEditor\\");
-            label3.Text = version;
+            versionLabel.Text = version;
             int fileCount = Directory.GetFiles(@"C:\ProgramData\SkEditor\").Length;
             string[] filePaths = Directory.GetFiles(@"C:\ProgramData\SkEditor\");
             Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
@@ -226,9 +208,9 @@ namespace SkEditor
                 joinDiscordToolStripMenuItem.Text = "Dołącz na naszego discorda";
                 ourWebsiteToolStripMenuItem.Text = "Nasza strona internetowa";
                 aboutSkEditorToolStripMenuItem.Text = "O SkEditorze";
-                Home.Text = "Dom";
+                Home.Text = "Strona Główna";
                 Editor.Text = "Edytor";
-                label2.Text = "Witaj w SkEditorze!";
+                welcomeLabel.Text = "Witaj w SkEditorze!";
                 toolStripButton12.Text = "Szukaj";
                 toolStripButton13.Text = "Szukaj i zamień";
                 findToolStripMenuItem.Text = "Szukaj";
@@ -276,7 +258,7 @@ namespace SkEditor
                 aboutSkEditorToolStripMenuItem.Text = "About SkEditor";
                 Home.Text = "Home";
                 Editor.Text = "Editor";
-                label2.Text = "Welcome to SkEditor!";
+                welcomeLabel.Text = "Welcome to SkEditor!";
                 toolStripButton12.Text = "Find";
                 toolStripButton13.Text = "Find and replace";
                 findToolStripMenuItem.Text = "Find";
@@ -451,9 +433,6 @@ namespace SkEditor
         Style green = new TextStyle(Brushes.LightGreen, null, FontStyle.Regular);
         Style yellow = new TextStyle(Brushes.YellowGreen, null, FontStyle.Regular);
         Style gray = new TextStyle(Brushes.LightGray, null, FontStyle.Italic);
-        static WebClient webClient = new WebClient();
-        //Newtonsoft.Json.JsonTextReader events = new Newtonsoft.Json.JsonTextReader(new StringReader(webClient.DownloadString("http://gameclub.gameclan.pl/api/apis-12d21hd289gc9gsfgh49gf9wg4789fgwc9g4wg79f4g79ftg@/f3gq078fg7804g84v3v2d2df76wd32vfocv7f3g5dg36wfd3gfd9rffr3wadf383wd6r9fwd3f8d3wf6d683f673cwv34cdf73wcvc4wf7c3wov.json")));
-        //Newtonsoft.Json.JsonTextReader conditions = new Newtonsoft.Json.JsonTextReader(new StringReader(webClient.DownloadString("http://gameclub.gameclan.pl/api/apis-12d21hd289gc9gsfgh49gf9wg4789fgwc9g4wg79f4g79ftg@/f3gq078fg7804g814v3v2d2df76wd32vfocv7f3gdg36wfd3gfd9rffr3wadf383wd6r9fwd3f8d2536342642356ov.json")));
         private void TextChangedEvent(object sender, TextChangedEventArgs e)
         {
             WebClient webClient = new WebClient();
@@ -800,29 +779,9 @@ namespace SkEditor
 
         private void aboutSkEditorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WebClient webclient = new WebClient();
-            if (!webclient.DownloadString("https://pastebin.com/raw/nYdZUkvT").Contains(version))
-            {
-                if (Properties.Settings.Default.Lang == "Polish")
-                {
-                    MessageBox.Show("Wersja: " + version + "\n" + "Dostępna aktualizacja: Tak" + "\n" + "Wersja aktualizacji: " + webclient.DownloadString("https://pastebin.com/raw/nYdZUkvT"), "SkEditor", MessageBoxButtons.OK, MessageBoxIcon.Information); //
-                }
-                else
-                {
-                    MessageBox.Show("Version: " + version + "\n" + "Avaible update: Yes" + "\n" + "Update version: " + webclient.DownloadString("https://pastebin.com/raw/nYdZUkvT"), "SkEditor", MessageBoxButtons.OK, MessageBoxIcon.Information); //
-                }
-            }
-            else
-            {
-                if (Properties.Settings.Default.Lang == "Polish")
-                {
-                    MessageBox.Show("Wersja: " + version + "\n" + "Dostępna aktualizacja: Nie", "SkEditor", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Version: " + version + "\n" + "Avaible update: No", "SkEditor", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
+            AboutSkEditorRemake aboutSkEditorRemake = new AboutSkEditorRemake();
+
+            aboutSkEditorRemake.ShowDialog();
         }
 
         private void tabControl1_Selecting(object sender, TabControlCancelEventArgs e)
@@ -893,7 +852,7 @@ namespace SkEditor
             {
                 createPastebin(GetFastColoredTextBox().Selection.Text);
             }
-            else 
+            else
             {
                 createPastebin(GetFastColoredTextBox().Text);
             }
