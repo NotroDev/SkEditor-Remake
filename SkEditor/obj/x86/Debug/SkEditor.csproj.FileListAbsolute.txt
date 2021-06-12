@@ -86,13 +86,14 @@ C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\bin\Debug\DiscordRPC.xml
 C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\bin\Debug\Newtonsoft.Json.xml
 C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Debug\SkEditor.csprojAssemblyReference.cache
 C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Debug\SkEditor.Properties.Resources.resources
-C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Debug\SkEditor.SkEditorOld.resources
 C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Debug\SkEditor.csproj.GenerateResource.cache
 C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Debug\SkEditor.csproj.CoreCompileInputs.cache
 C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Debug\SkEditor.csproj.CopyComplete
 C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Debug\SkEditor.AboutSkEditorRemake.resources
-C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\bin\Debug\SkEditor.exe.config
-C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\bin\Debug\SkEditor.exe
-C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\bin\Debug\SkEditor.pdb
-C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Debug\SkEditor.exe
-C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Debug\SkEditor.pdb
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\bin\Debug\SkEditor Remake.exe.config
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\bin\Debug\SkEditor Remake.exe
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\bin\Debug\SkEditor Remake.pdb
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Debug\SkEditor.settingsForm.resources
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Debug\SkEditor.SkEditorRemake.resources
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Debug\SkEditor Remake.exe
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Debug\SkEditor Remake.pdb

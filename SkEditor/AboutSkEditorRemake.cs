@@ -24,7 +24,7 @@ namespace SkEditor
                 questionLabel.Text = "Co to jest SkEditor?";
                 question2Label.Text = "Co to jest SkEditor Remake?";
 
-                answerLabel.Text = "SkEditor to edytor skryptów tworzonych w pluginie Skript w grze Minecraft.\nStworzony został przez Glitchtrapa (Kiedyś: Michix).\nProjekt został porzucony.";
+                answerLabel.Text = "SkEditor to edytor skryptów tworzonych w pluginie Skript w grze Minecraft.\nStworzony został przez Michix.\nProjekt został porzucony.";
                 answer2Label.Text = "SkEditor Remake to przerobiona i ulepszona wersja SkEditora.\nProgram został stworzony ze względu na porzucenie oryginalnego.\nTworzony jest przez NotroDeva.";
             }
             else
@@ -32,7 +32,7 @@ namespace SkEditor
                 questionLabel.Text = "What is SkEditor?";
                 question2Label.Text = "What is SkEditor Remake?";
 
-                answerLabel.Text = "SkEditor is an editor for scripts created in the Skript plugin in Minecraft.\nIt was created by Glitchtrap (Old: Michix).\nProject was abandoned.";
+                answerLabel.Text = "SkEditor is an editor for scripts created in the Skript plugin in Minecraft.\nIt was created by Michix.\nProject was abandoned.";
                 answer2Label.Text = "SkEditor Remake is a reworked and improved version of SkEditor.\nProgram was created due to the abandonment of the original.\nCreated by NotroDev.";
             }
         }

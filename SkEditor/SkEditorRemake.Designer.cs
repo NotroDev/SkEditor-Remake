@@ -1,6 +1,6 @@
 ﻿namespace SkEditor
 {
-    partial class SkEditorOld
+    partial class SkEditorRemake
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SkEditorOld));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SkEditorRemake));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.versionLabel = new System.Windows.Forms.Label();
@@ -90,15 +90,13 @@
             this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.polskiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.enabledToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.disabledToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.skriptDocumentationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.otherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.joinDiscordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ourWebsiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutSkEditorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.subWelcomeLabel = new System.Windows.Forms.Label();
+            this.settingsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -376,7 +374,7 @@
             this.editToolStripMenuItem,
             this.settingsToolStripMenuItem,
             this.skriptDocumentationToolStripMenuItem,
-            this.toolStripMenuItem1});
+            this.otherToolStripMenuItem});
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -533,8 +531,7 @@
             // 
             this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.modeToolStripMenuItem,
-            this.languageToolStripMenuItem,
-            this.panelToolStripMenuItem});
+            this.languageToolStripMenuItem});
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             resources.ApplyResources(this.settingsToolStripMenuItem, "settingsToolStripMenuItem");
             // 
@@ -584,43 +581,21 @@
             resources.ApplyResources(this.polskiToolStripMenuItem, "polskiToolStripMenuItem");
             this.polskiToolStripMenuItem.Click += new System.EventHandler(this.polskiToolStripMenuItem_Click);
             // 
-            // panelToolStripMenuItem
-            // 
-            this.panelToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.enabledToolStripMenuItem,
-            this.disabledToolStripMenuItem});
-            this.panelToolStripMenuItem.Image = global::SkEditor.Properties.Resources.menu;
-            this.panelToolStripMenuItem.Name = "panelToolStripMenuItem";
-            resources.ApplyResources(this.panelToolStripMenuItem, "panelToolStripMenuItem");
-            // 
-            // enabledToolStripMenuItem
-            // 
-            this.enabledToolStripMenuItem.Image = global::SkEditor.Properties.Resources.x_mark_16;
-            this.enabledToolStripMenuItem.Name = "enabledToolStripMenuItem";
-            resources.ApplyResources(this.enabledToolStripMenuItem, "enabledToolStripMenuItem");
-            this.enabledToolStripMenuItem.Click += new System.EventHandler(this.enabledToolStripMenuItem_Click);
-            // 
-            // disabledToolStripMenuItem
-            // 
-            this.disabledToolStripMenuItem.Image = global::SkEditor.Properties.Resources.x_mark_16;
-            this.disabledToolStripMenuItem.Name = "disabledToolStripMenuItem";
-            resources.ApplyResources(this.disabledToolStripMenuItem, "disabledToolStripMenuItem");
-            this.disabledToolStripMenuItem.Click += new System.EventHandler(this.disabledToolStripMenuItem_Click);
-            // 
             // skriptDocumentationToolStripMenuItem
             // 
             this.skriptDocumentationToolStripMenuItem.Name = "skriptDocumentationToolStripMenuItem";
             resources.ApplyResources(this.skriptDocumentationToolStripMenuItem, "skriptDocumentationToolStripMenuItem");
             this.skriptDocumentationToolStripMenuItem.Click += new System.EventHandler(this.skriptDocumentationToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem1
+            // otherToolStripMenuItem
             // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.otherToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.joinDiscordToolStripMenuItem,
             this.ourWebsiteToolStripMenuItem,
-            this.aboutSkEditorToolStripMenuItem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+            this.aboutSkEditorToolStripMenuItem,
+            this.settingsToolStripMenuItem1});
+            this.otherToolStripMenuItem.Name = "otherToolStripMenuItem";
+            resources.ApplyResources(this.otherToolStripMenuItem, "otherToolStripMenuItem");
             // 
             // joinDiscordToolStripMenuItem
             // 
@@ -648,6 +623,12 @@
             resources.ApplyResources(this.subWelcomeLabel, "subWelcomeLabel");
             this.subWelcomeLabel.Name = "subWelcomeLabel";
             // 
+            // settingsToolStripMenuItem1
+            // 
+            this.settingsToolStripMenuItem1.Name = "settingsToolStripMenuItem1";
+            resources.ApplyResources(this.settingsToolStripMenuItem1, "settingsToolStripMenuItem1");
+            this.settingsToolStripMenuItem1.Click += new System.EventHandler(this.settingsToolStripMenuItem1_Click);
+            // 
             // SkEditorOld
             // 
             resources.ApplyResources(this, "$this");
@@ -658,6 +639,7 @@
             this.Controls.Add(this.panel1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "SkEditorOld";
+            this.Activated += new System.EventHandler(this.SkEditorOld_Activated);
             this.Load += new System.EventHandler(this.SkEditor_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -690,7 +672,7 @@
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem skriptDocumentationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem otherToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem languageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem joinDiscordToolStripMenuItem;
@@ -715,9 +697,6 @@
         private System.Windows.Forms.ToolStripMenuItem darkToolStripMenuItem;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label versionLabel;
-        private System.Windows.Forms.ToolStripMenuItem panelToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem enabledToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem disabledToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutSkEditorToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
@@ -747,5 +726,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton15;
         private System.Windows.Forms.Label subNameLabel;
         private System.Windows.Forms.Label subWelcomeLabel;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem1;
     }
 }

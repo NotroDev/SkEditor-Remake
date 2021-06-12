@@ -15,19 +15,21 @@ using FontStyle = System.Drawing.FontStyle;
 using Clipboard = System.Windows.Clipboard;
 using Application = System.Windows.Forms.Application;
 using DialogResult = System.Windows.Forms.DialogResult;
+using DiscordRPC;
+using DiscordRPC.Logging;
 
 namespace SkEditor
 {
-    public partial class SkEditorOld : Form
+    public partial class SkEditorRemake : Form
     {
-        public string version = "1.0.0";
+        public string version = "v0.2 Alpha";
 
         public static class Environment
         {
 
         }
 
-        public SkEditorOld()
+        public SkEditorRemake()
         {
             InitializeComponent();
         }
@@ -36,30 +38,23 @@ namespace SkEditor
 
         public static string ready = "false";
 
-        DiscordRPC.DiscordRpcClient client = new DiscordRPC.DiscordRpcClient("787430361742311424");
-        DiscordRPC.RichPresence richPresence = new DiscordRPC.RichPresence()
-        {
-            Assets = new DiscordRPC.Assets()
-            {
-                LargeImageKey = "large_image",
-                LargeImageText = "Skript",
-                SmallImageKey = "small_image",
-                SmallImageText = "SkEditor"
-            }
-        };
-        public void UpdateRPC(string Details, string State)
-        {
-            if (!client.IsInitialized)
-            {
-                client.Initialize();
-            }
-            client.SetPresence(richPresence);
-            richPresence.Details = Details;
-            richPresence.State = State;
-        }
-
         private void SkEditor_Load(object sender, EventArgs e)
         {
+            DiscordRpcClient client = new DiscordRpcClient("853260040663728135");
+            client.Logger = new ConsoleLogger() { Level = LogLevel.Warning };
+            client.Initialize();
+
+            client.SetPresence(new DiscordRPC.RichPresence()
+            {
+                Details = "Test1",
+                State = "Test2",
+                Timestamps = Timestamps.Now,
+                Assets = new Assets()
+                {
+                    LargeImageKey = "skeditor_large",
+                    LargeImageText = "SkEditor Remake"
+                }
+            });
 
             menuStrip1.Renderer = new CustomProfessionalRenderer();
 
@@ -127,46 +122,6 @@ namespace SkEditor
                     GetFastColoredTextBox().SaveToFile("C:\\ProgramData\\SkEditor\\" + tabControl1.SelectedTab.Text.Replace("*", ""), Encoding.UTF8);
                 }
             }
-            if (Properties.Settings.Default.Mode == "Dark")
-            {
-                darkToolStripMenuItem.Image = Properties.Resources.checkmark_16;
-                lightToolStripMenuItem.Image = Properties.Resources.x_mark_16;
-                GetFastColoredTextBox().BackColor = Color.FromArgb(50, 50, 50);
-                GetFastColoredTextBox().IndentBackColor = Color.FromArgb(45, 45, 45);
-                GetFastColoredTextBox().LineNumberColor = Color.White;
-                GetFastColoredTextBox().ForeColor = Color.White;
-            }
-            else
-            {
-                darkToolStripMenuItem.Image = Properties.Resources.x_mark_16;
-                lightToolStripMenuItem.Image = Properties.Resources.checkmark_16;
-                GetFastColoredTextBox().BackColor = Color.White;
-                GetFastColoredTextBox().IndentBackColor = Color.WhiteSmoke;
-                GetFastColoredTextBox().LineNumberColor = Color.Black;
-                GetFastColoredTextBox().ForeColor = Color.Black;
-            }
-            if (Properties.Settings.Default.Lang == "Polish")
-            {
-                setLang("polish");
-            }
-            else
-            {
-                setLang("english");
-            }
-            if (Properties.Settings.Default.Panel == "Enabled")
-            {
-                panel3.Visible = false;
-                panel1.Visible = true;
-                enabledToolStripMenuItem.Image = Properties.Resources.checkmark_16;
-                disabledToolStripMenuItem.Image = Properties.Resources.x_mark_16;
-            }
-            else
-            {
-                panel3.Visible = true;
-                panel1.Visible = false;
-                disabledToolStripMenuItem.Image = Properties.Resources.checkmark_16;
-                enabledToolStripMenuItem.Image = Properties.Resources.x_mark_16;
-            }
             int z = Int32.Parse(Properties.Settings.Default.Zoom);
             GetFastColoredTextBox().Zoom = z;
         }
@@ -206,8 +161,6 @@ namespace SkEditor
                 toolStripButton10.Text = "Ponów";
                 lightToolStripMenuItem.Text = "Jasny";
                 darkToolStripMenuItem.Text = "Ciemny";
-                enabledToolStripMenuItem.Text = "Włączony";
-                disabledToolStripMenuItem.Text = "Wyłączony";
                 joinDiscordToolStripMenuItem.Text = "Dołącz na naszego discorda";
                 ourWebsiteToolStripMenuItem.Text = "Nasza strona internetowa";
                 aboutSkEditorToolStripMenuItem.Text = "O SkEditorze";
@@ -221,6 +174,8 @@ namespace SkEditor
                 replaceToolStripMenuItem.Text = "Szukaj i zamień";
                 toolStripButton14.Text = "Przybliż";
                 toolStripButton15.Text = "Oddal";
+                otherToolStripMenuItem.Text = "Inne";
+                settingsToolStripMenuItem1.Text = "Ustawienia";
             }
             else if (LangString == "english")
             {
@@ -255,8 +210,6 @@ namespace SkEditor
                 toolStripButton10.Text = "Redo";
                 lightToolStripMenuItem.Text = "Light";
                 darkToolStripMenuItem.Text = "Dark";
-                enabledToolStripMenuItem.Text = "Enabled";
-                disabledToolStripMenuItem.Text = "Disabled";
                 joinDiscordToolStripMenuItem.Text = "Join Discord";
                 ourWebsiteToolStripMenuItem.Text = "Our Website";
                 aboutSkEditorToolStripMenuItem.Text = "About SkEditor";
@@ -270,6 +223,8 @@ namespace SkEditor
                 replaceToolStripMenuItem.Text = "Find and replace";
                 toolStripButton14.Text = "Zoom in";
                 toolStripButton15.Text = "Zoom out";
+                otherToolStripMenuItem.Text = "Other";
+                settingsToolStripMenuItem1.Text = "Settings";
             }
         }
 
@@ -355,7 +310,6 @@ namespace SkEditor
                 GetFastColoredTextBox().LineNumberColor = Color.Black;
                 GetFastColoredTextBox().ForeColor = Color.Black;
             }
-            UpdateRPC("In Menu", "");
         }
 
         public void closeFile()
@@ -444,7 +398,6 @@ namespace SkEditor
             Directory.CreateDirectory("C:\\ProgramData\\SkEditor\\");
             if (ready == "true")
             {
-                UpdateRPC("Editing", tabControl1.SelectedTab.Text.Replace("*", ""));
                 if (tabControl1.SelectedTab.Text.Contains(".sk"))
                 {
                     GetFastColoredTextBox().SaveToFile("C:\\ProgramData\\SkEditor\\" + tabControl1.SelectedTab.Text.Replace("*", ""), Encoding.UTF8);
@@ -762,26 +715,6 @@ namespace SkEditor
             }
         }
 
-        private void enabledToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.Panel = "Enabled";
-            Properties.Settings.Default.Save();
-            panel3.Visible = false;
-            panel1.Visible = true;
-            enabledToolStripMenuItem.Image = Properties.Resources.checkmark_16;
-            disabledToolStripMenuItem.Image = Properties.Resources.x_mark_16;
-        }
-
-        private void disabledToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.Panel = "Disabled";
-            Properties.Settings.Default.Save();
-            panel3.Visible = true;
-            panel1.Visible = false;
-            disabledToolStripMenuItem.Image = Properties.Resources.checkmark_16;
-            enabledToolStripMenuItem.Image = Properties.Resources.x_mark_16;
-        }
-
         private void aboutSkEditorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutSkEditorRemake aboutSkEditorRemake = new AboutSkEditorRemake();
@@ -938,6 +871,68 @@ namespace SkEditor
             button.Click += ClickFunction;
             button.DisplayStyle = ToolStripItemDisplayStyle.Text;
             toolStrip1.Items.Add(button);
+        }
+
+        private void settingsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            settingsForm settingsForm = new settingsForm();
+
+            settingsForm.ShowDialog();
+        }
+
+        private void SkEditorOld_Activated(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.Lang == "Polish")
+            {
+                setLang("polish");
+            }
+            else
+            {
+                setLang("english");
+            }
+
+            if (Properties.Settings.Default.Panel == "Enabled")
+            {
+                panel3.Visible = true;
+                panel1.Visible = true;
+            }
+            else
+            {
+                panel3.Visible = true;
+                panel1.Visible = false;
+            }
+
+            if (Properties.Settings.Default.Mode == "Light")
+            {
+                setTheme("Light");
+            }
+            else if (Properties.Settings.Default.Mode == "Dark")
+            {
+                setTheme("Dark");
+            }
+        }
+
+        public void setTheme(string themeString)
+        {
+            if (themeString == "Light")
+            {
+                darkToolStripMenuItem.Image = Properties.Resources.x_mark_16;
+                lightToolStripMenuItem.Image = Properties.Resources.checkmark_16;
+                GetFastColoredTextBox().BackColor = Color.White;
+                GetFastColoredTextBox().IndentBackColor = Color.WhiteSmoke;
+                GetFastColoredTextBox().LineNumberColor = Color.Black;
+                GetFastColoredTextBox().ForeColor = Color.Black;
+            }
+
+            else if (themeString == "Dark")
+            {
+                darkToolStripMenuItem.Image = Properties.Resources.checkmark_16;
+                lightToolStripMenuItem.Image = Properties.Resources.x_mark_16;
+                GetFastColoredTextBox().BackColor = Color.FromArgb(50, 50, 50);
+                GetFastColoredTextBox().IndentBackColor = Color.FromArgb(45, 45, 45);
+                GetFastColoredTextBox().LineNumberColor = Color.White;
+                GetFastColoredTextBox().ForeColor = Color.White;
+            }
         }
     }
 
