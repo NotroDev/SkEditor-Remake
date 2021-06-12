@@ -1,5 +1,7 @@
 # SkEditor Remake
 
+[![Serwer Discord](https://img.shields.io/badge/-Serwer%20Discord-blue)](https://discord.gg/AgFzmFFxfw)
+
 It's a fork of SkEditor. This is not an official program. You can find the official here: 
 
 https://github.com/MichixYT/SkEditor
