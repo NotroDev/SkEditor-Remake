@@ -17,6 +17,11 @@ using Application = System.Windows.Forms.Application;
 using DialogResult = System.Windows.Forms.DialogResult;
 using DiscordRPC;
 using DiscordRPC.Logging;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Text.RegularExpressions;
+using System.ServiceModel.Description;
+using System.Net.Http.Headers;
 
 namespace SkEditor
 {
@@ -49,6 +54,10 @@ namespace SkEditor
                 Details = "Test1",
                 State = "Test2",
                 Timestamps = Timestamps.Now,
+                Buttons = new DiscordRPC.Button[]
+                {
+                    new DiscordRPC.Button() { Label = "Pobierz SkEditor Remake", Url = "https://github.com/NotroDev/SkEditor-Remake" }
+                },
                 Assets = new Assets()
                 {
                     LargeImageKey = "skeditor_large",
@@ -130,11 +139,8 @@ namespace SkEditor
         {
             if (LangString == "polish")
             {
-                polskiToolStripMenuItem.Image = Properties.Resources.checkmark_16;
-                englishToolStripMenuItem.Image = Properties.Resources.x_mark_16;
                 fileToolStripMenuItem.Text = "Plik";
                 editToolStripMenuItem.Text = "Edycja";
-                settingsToolStripMenuItem.Text = "Ustawienia";
                 skriptDocumentationToolStripMenuItem.Text = "Dokumentacja Skripta";
                 newToolStripMenuItem.Text = "Nowy";
                 saveToolStripMenuItem.Text = "Zapisz";
@@ -147,20 +153,16 @@ namespace SkEditor
                 pasteToolStripMenuItem.Text = "Wklej";
                 undoToolStripMenuItem.Text = "Cofnij";
                 redoToolStripMenuItem.Text = "Ponów";
-                modeToolStripMenuItem.Text = "Tryb";
-                languageToolStripMenuItem.Text = "Język";
-                toolStripButton1.Text = "Nowy";
-                toolStripButton2.Text = "Otwórz";
-                toolStripButton3.Text = "Zapisz";
-                toolStripButton4.Text = "Zamknij";
-                toolStripButton5.Text = "Zamknij wszystko";
-                toolStripButton6.Text = "Wytnij";
-                toolStripButton7.Text = "Kopiuj";
-                toolStripButton8.Text = "Wklej";
-                toolStripButton9.Text = "Cofnij";
-                toolStripButton10.Text = "Ponów";
-                lightToolStripMenuItem.Text = "Jasny";
-                darkToolStripMenuItem.Text = "Ciemny";
+                newToolStripButton.Text = "Nowy";
+                openToolStripButton.Text = "Otwórz";
+                saveToolStripButton.Text = "Zapisz";
+                closeToolStripButton.Text = "Zamknij";
+                closeAllToolStripButton.Text = "Zamknij wszystko";
+                cutToolStripButton.Text = "Wytnij";
+                copyToolStripButton.Text = "Kopiuj";
+                pasteToolStripButton.Text = "Wklej";
+                undoToolStripButton.Text = "Cofnij";
+                redoToolStripButton.Text = "Ponów";
                 joinDiscordToolStripMenuItem.Text = "Dołącz na naszego discorda";
                 ourWebsiteToolStripMenuItem.Text = "Nasza strona internetowa";
                 aboutSkEditorToolStripMenuItem.Text = "O SkEditorze";
@@ -168,22 +170,19 @@ namespace SkEditor
                 editorButton.Text = "Edytor";
                 welcomeLabel.Text = "Witaj w SkEditor Remake!";
                 subWelcomeLabel.Text = "Jest to wersja testowa. W razie problemu możesz napisać do twórcy na Discord - Notro#3737";
-                toolStripButton12.Text = "Szukaj";
-                toolStripButton13.Text = "Szukaj i zamień";
+                searchToolStripButton.Text = "Szukaj";
+                replaceToolStripButton.Text = "Szukaj i zamień";
                 findToolStripMenuItem.Text = "Szukaj";
                 replaceToolStripMenuItem.Text = "Szukaj i zamień";
-                toolStripButton14.Text = "Przybliż";
-                toolStripButton15.Text = "Oddal";
+                zoomInToolStripButton.Text = "Przybliż";
+                zoomOutToolStripButton.Text = "Oddal";
                 otherToolStripMenuItem.Text = "Inne";
                 settingsToolStripMenuItem1.Text = "Ustawienia";
             }
             else if (LangString == "english")
             {
-                polskiToolStripMenuItem.Image = Properties.Resources.x_mark_16;
-                englishToolStripMenuItem.Image = Properties.Resources.checkmark_16;
                 fileToolStripMenuItem.Text = "File";
                 editToolStripMenuItem.Text = "Edit";
-                settingsToolStripMenuItem.Text = "Settings";
                 skriptDocumentationToolStripMenuItem.Text = "Skript Documentation";
                 newToolStripMenuItem.Text = "New";
                 saveToolStripMenuItem.Text = "Save";
@@ -196,20 +195,16 @@ namespace SkEditor
                 pasteToolStripMenuItem.Text = "Paste";
                 undoToolStripMenuItem.Text = "Undo";
                 redoToolStripMenuItem.Text = "Redo";
-                modeToolStripMenuItem.Text = "Mode";
-                languageToolStripMenuItem.Text = "Language";
-                toolStripButton1.Text = "New";
-                toolStripButton2.Text = "Open";
-                toolStripButton3.Text = "Save";
-                toolStripButton4.Text = "Close";
-                toolStripButton5.Text = "Close all";
-                toolStripButton6.Text = "Cut";
-                toolStripButton7.Text = "Copy";
-                toolStripButton8.Text = "Paste";
-                toolStripButton9.Text = "Undo";
-                toolStripButton10.Text = "Redo";
-                lightToolStripMenuItem.Text = "Light";
-                darkToolStripMenuItem.Text = "Dark";
+                newToolStripButton.Text = "New";
+                openToolStripButton.Text = "Open";
+                saveToolStripButton.Text = "Save";
+                closeToolStripButton.Text = "Close";
+                closeAllToolStripButton.Text = "Close all";
+                cutToolStripButton.Text = "Cut";
+                copyToolStripButton.Text = "Copy";
+                pasteToolStripButton.Text = "Paste";
+                undoToolStripButton.Text = "Undo";
+                redoToolStripButton.Text = "Redo";
                 joinDiscordToolStripMenuItem.Text = "Join Discord";
                 ourWebsiteToolStripMenuItem.Text = "Our Website";
                 aboutSkEditorToolStripMenuItem.Text = "About SkEditor";
@@ -217,12 +212,12 @@ namespace SkEditor
                 editorButton.Text = "Editor";
                 welcomeLabel.Text = "Welcome to SkEditor Remake!";
                 subWelcomeLabel.Text = "This is a test version. In case of bug or problem, you can write to author on Discord - Notro#3737";
-                toolStripButton12.Text = "Find";
-                toolStripButton13.Text = "Find and replace";
+                searchToolStripButton.Text = "Find";
+                replaceToolStripButton.Text = "Find and replace";
                 findToolStripMenuItem.Text = "Find";
                 replaceToolStripMenuItem.Text = "Find and replace";
-                toolStripButton14.Text = "Zoom in";
-                toolStripButton15.Text = "Zoom out";
+                zoomInToolStripButton.Text = "Zoom in";
+                zoomOutToolStripButton.Text = "Zoom out";
                 otherToolStripMenuItem.Text = "Other";
                 settingsToolStripMenuItem1.Text = "Settings";
             }
@@ -294,8 +289,6 @@ namespace SkEditor
             tabControl1.SelectTab(tp);
             if (Properties.Settings.Default.Mode == "Dark")
             {
-                darkToolStripMenuItem.Image = Properties.Resources.checkmark_16;
-                lightToolStripMenuItem.Image = Properties.Resources.x_mark_16;
                 GetFastColoredTextBox().BackColor = Color.FromArgb(50, 50, 50);
                 GetFastColoredTextBox().IndentBackColor = Color.FromArgb(45, 45, 45);
                 GetFastColoredTextBox().LineNumberColor = Color.White;
@@ -303,8 +296,6 @@ namespace SkEditor
             }
             else
             {
-                darkToolStripMenuItem.Image = Properties.Resources.x_mark_16;
-                lightToolStripMenuItem.Image = Properties.Resources.checkmark_16;
                 GetFastColoredTextBox().BackColor = Color.White;
                 GetFastColoredTextBox().IndentBackColor = Color.WhiteSmoke;
                 GetFastColoredTextBox().LineNumberColor = Color.Black;
@@ -689,8 +680,6 @@ namespace SkEditor
         {
             Properties.Settings.Default.Mode = "Light";
             Properties.Settings.Default.Save();
-            darkToolStripMenuItem.Image = Properties.Resources.x_mark_16;
-            lightToolStripMenuItem.Image = Properties.Resources.checkmark_16;
             if (0 < tabControl1.TabPages.Count)
             {
                 GetFastColoredTextBox().BackColor = Color.White;
@@ -704,8 +693,6 @@ namespace SkEditor
         {
             Properties.Settings.Default.Mode = "Dark";
             Properties.Settings.Default.Save();
-            darkToolStripMenuItem.Image = Properties.Resources.checkmark_16;
-            lightToolStripMenuItem.Image = Properties.Resources.x_mark_16;
             if (0 < tabControl1.TabPages.Count)
             {
                 GetFastColoredTextBox().BackColor = Color.FromArgb(50, 50, 50);
@@ -728,8 +715,6 @@ namespace SkEditor
             {
                 if (Properties.Settings.Default.Mode == "Dark")
                 {
-                    darkToolStripMenuItem.Image = Properties.Resources.checkmark_16;
-                    lightToolStripMenuItem.Image = Properties.Resources.x_mark_16;
                     GetFastColoredTextBox().BackColor = Color.FromArgb(50, 50, 50);
                     GetFastColoredTextBox().IndentBackColor = Color.FromArgb(45, 45, 45);
                     GetFastColoredTextBox().LineNumberColor = Color.White;
@@ -737,8 +722,6 @@ namespace SkEditor
                 }
                 else
                 {
-                    darkToolStripMenuItem.Image = Properties.Resources.x_mark_16;
-                    lightToolStripMenuItem.Image = Properties.Resources.checkmark_16;
                     GetFastColoredTextBox().BackColor = Color.White;
                     GetFastColoredTextBox().IndentBackColor = Color.WhiteSmoke;
                     GetFastColoredTextBox().LineNumberColor = Color.Black;
@@ -746,65 +729,6 @@ namespace SkEditor
                 }
                 int z = Int32.Parse(Properties.Settings.Default.Zoom);
                 GetFastColoredTextBox().Zoom = z;
-            }
-        }
-
-        public void createPastebin(string Code)
-        {
-            if (string.IsNullOrEmpty(Code.Trim())) { return; }
-
-            NameValueCollection IQuery = new NameValueCollection();
-
-            IQuery.Add("api_dev_key", "3a26130ae7db1bf8aca1a069b31d4e37");
-            IQuery.Add("api_option", "paste");
-            IQuery.Add("api_paste_code", Code);
-            IQuery.Add("api_paste_name", tabControl1.SelectedTab.Text);
-
-            using (WebClient IClient = new WebClient())
-            {
-                string IResponse = Encoding.UTF8.GetString(IClient.UploadValues("https://pastebin.com/api/api_post.php", IQuery));
-
-                Uri isValid = null;
-                if (!Uri.TryCreate(IResponse, UriKind.Absolute, out isValid))
-                {
-                    throw new WebException("Paste Error", WebExceptionStatus.SendFailure);
-                }
-                else
-                {
-                    Clipboard.SetText(IResponse);
-                    if (Properties.Settings.Default.Lang == "Polish")
-                    {
-                        MessageBox.Show("Link został skopiowany do schowka", "SkEditor", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("The link has been copied to the clipboard", "SkEditor", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-            }
-        }
-
-        private void toolStripButton11_Click(object sender, EventArgs e)
-        {
-            if (!isNullOrEmpty(GetFastColoredTextBox().Selection.Text))
-            {
-                createPastebin(GetFastColoredTextBox().Selection.Text);
-            }
-            else
-            {
-                createPastebin(GetFastColoredTextBox().Text);
-            }
-        }
-
-        private void pastebinToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (!isNullOrEmpty(GetFastColoredTextBox().Selection.Text))
-            {
-                createPastebin(GetFastColoredTextBox().Selection.Text);
-            }
-            else
-            {
-                createPastebin(GetFastColoredTextBox().Text);
             }
         }
 
@@ -910,14 +834,21 @@ namespace SkEditor
             {
                 setTheme("Dark");
             }
+
+            if (Properties.Settings.Default.IconSet == "Default")
+            {
+                setIcons("Default");
+            }
+            else if (Properties.Settings.Default.IconSet == "Old")
+            {
+                setIcons("Old");
+            }
         }
 
         public void setTheme(string themeString)
         {
             if (themeString == "Light")
             {
-                darkToolStripMenuItem.Image = Properties.Resources.x_mark_16;
-                lightToolStripMenuItem.Image = Properties.Resources.checkmark_16;
                 GetFastColoredTextBox().BackColor = Color.White;
                 GetFastColoredTextBox().IndentBackColor = Color.WhiteSmoke;
                 GetFastColoredTextBox().LineNumberColor = Color.Black;
@@ -926,13 +857,119 @@ namespace SkEditor
 
             else if (themeString == "Dark")
             {
-                darkToolStripMenuItem.Image = Properties.Resources.checkmark_16;
-                lightToolStripMenuItem.Image = Properties.Resources.x_mark_16;
                 GetFastColoredTextBox().BackColor = Color.FromArgb(50, 50, 50);
                 GetFastColoredTextBox().IndentBackColor = Color.FromArgb(45, 45, 45);
                 GetFastColoredTextBox().LineNumberColor = Color.White;
                 GetFastColoredTextBox().ForeColor = Color.White;
             }
+        }
+
+        public void setIcons(string iconsString)
+        {
+            if (iconsString == "Default")
+            {
+                newToolStripButton.Image = Properties.Resources.new_file;
+                openToolStripButton.Image = Properties.Resources.open_file;
+                saveToolStripButton.Image = Properties.Resources.save_file;
+                closeToolStripButton.Image = Properties.Resources.close_file;
+                closeAllToolStripButton.Image = Properties.Resources.close_all;
+                cutToolStripButton.Image = Properties.Resources.cut;
+                copyToolStripButton.Image = Properties.Resources.copy_file;
+                pasteToolStripButton.Image = Properties.Resources.paste_file;
+                undoToolStripButton.Image = Properties.Resources.undo_b;
+                redoToolStripButton.Image = Properties.Resources.redo_b;
+                searchToolStripButton.Image = Properties.Resources.search;
+                replaceToolStripButton.Image = Properties.Resources.replace;
+                zoomInToolStripButton.Image = Properties.Resources.zoom_in;
+                zoomOutToolStripButton.Image = Properties.Resources.zoom_out;
+
+                newToolStripMenuItem.Image = Properties.Resources.new_file;
+                openToolStripMenuItem.Image = Properties.Resources.open_file;
+                saveToolStripMenuItem.Image = Properties.Resources.save_file;
+                closeToolStripMenuItem.Image = Properties.Resources.close_file;
+                closeAllToolStripMenuItem.Image = Properties.Resources.close_all;
+                cutToolStripMenuItem.Image = Properties.Resources.cut;
+                copyToolStripMenuItem.Image = Properties.Resources.copy_file;
+                pasteToolStripMenuItem.Image = Properties.Resources.paste_file;
+                undoToolStripMenuItem.Image = Properties.Resources.undo_b;
+                redoToolStripMenuItem.Image = Properties.Resources.redo_b;
+                findToolStripMenuItem.Image = Properties.Resources.search;
+                replaceToolStripMenuItem.Image = Properties.Resources.replace;
+                exitToolStripMenuItem.Image = Properties.Resources.exit;
+            }
+
+            else if (iconsString == "Old")
+            {
+                newToolStripButton.Image = Properties.Resources.new_file_old;
+                openToolStripButton.Image = Properties.Resources.open_old;
+                saveToolStripButton.Image = Properties.Resources.save_old;
+                closeToolStripButton.Image = Properties.Resources.close_file_old;
+                closeAllToolStripButton.Image = Properties.Resources.close_all_old;
+                cutToolStripButton.Image = Properties.Resources.cut_old;
+                copyToolStripButton.Image = Properties.Resources.copy_old;
+                pasteToolStripButton.Image = Properties.Resources.paste_old;
+                undoToolStripButton.Image = Properties.Resources.undo_old;
+                redoToolStripButton.Image = Properties.Resources.redo_old;
+                searchToolStripButton.Image = Properties.Resources.search_old;
+                replaceToolStripButton.Image = Properties.Resources.replace_old;
+                zoomInToolStripButton.Image = Properties.Resources.zoom_in_old;
+                zoomOutToolStripButton.Image = Properties.Resources.zoom_out_old;
+
+                newToolStripMenuItem.Image = Properties.Resources.new_file_old;
+                openToolStripMenuItem.Image = Properties.Resources.open_old;
+                saveToolStripMenuItem.Image = Properties.Resources.save_old;
+                closeToolStripMenuItem.Image = Properties.Resources.close_file_old;
+                closeAllToolStripMenuItem.Image = Properties.Resources.close_all_old;
+                cutToolStripMenuItem.Image = Properties.Resources.cut_old;
+                copyToolStripMenuItem.Image = Properties.Resources.copy_old;
+                pasteToolStripMenuItem.Image = Properties.Resources.paste_old;
+                undoToolStripMenuItem.Image = Properties.Resources.undo_old;
+                redoToolStripMenuItem.Image = Properties.Resources.redo_old;
+                findToolStripMenuItem.Image = Properties.Resources.search_old;
+                replaceToolStripMenuItem.Image = Properties.Resources.replace_old;
+                exitToolStripMenuItem.Image = Properties.Resources.exit_old;
+            }
+        }
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            publishCode(GetFastColoredTextBox().Text);
+        }
+
+        async void publishCode(string Code)
+        {
+            if (string.IsNullOrWhiteSpace(Code))
+                Code = " ";
+            CookieContainer cookies = new CookieContainer();
+            HttpClientHandler handler = new HttpClientHandler();
+            handler.CookieContainer = cookies;
+            using (HttpClient client = new HttpClient(handler))
+            {
+                using (HttpResponseMessage response = client.GetAsync("https://code.skript.pl").Result)
+                {
+                    HttpHeaders headers = response.Headers;
+                    HttpContent content = response.Content;
+                    string myContent = content.ReadAsStringAsync().Result;
+                    Regex regex = new Regex("name='csrf-token' content='(.*)'");
+                    var otherLang = regex.Match(myContent).Groups[1];
+                    var values = new Dictionary<string, string>
+                    {
+                        { "lang", "text" },
+                        { "content", Code },
+                        { "_token", otherLang.ToString() }
+                    };
+                    var content2 = new FormUrlEncodedContent(values);
+                    var response2 = await client.PostAsync("https://code.skript.pl/create", content2);
+                    var responseString = response2.RequestMessage.RequestUri;
+                    Clipboard.SetText(responseString.ToString());
+                    MessageBox.Show("Link został skopiowany do schowka.", "Skopiowano link", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void skriptToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            publishCode(GetFastColoredTextBox().Text);
         }
     }
 

@@ -42,33 +42,33 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.closeToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.closeAllToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
+            this.codeSkriptToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.cutToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.copyToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.pasteToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
+            this.undoToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.redoToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
+            this.searchToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.replaceToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton15 = new System.Windows.Forms.ToolStripButton();
+            this.zoomInToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.zoomOutToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
-            this.pastebinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skriptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,20 +83,14 @@
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
             this.findToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.replaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.darkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.polskiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.skriptDocumentationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.otherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.joinDiscordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ourWebsiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutSkEditorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.subWelcomeLabel = new System.Windows.Forms.Label();
             this.settingsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.subWelcomeLabel = new System.Windows.Forms.Label();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -197,174 +191,174 @@
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton3,
-            this.toolStripButton4,
-            this.toolStripButton5,
+            this.newToolStripButton,
+            this.openToolStripButton,
+            this.saveToolStripButton,
+            this.closeToolStripButton,
+            this.closeAllToolStripButton,
             this.toolStripSeparator1,
-            this.toolStripButton11,
+            this.codeSkriptToolStripButton,
             this.toolStripSeparator3,
-            this.toolStripButton6,
-            this.toolStripButton7,
-            this.toolStripButton8,
+            this.cutToolStripButton,
+            this.copyToolStripButton,
+            this.pasteToolStripButton,
             this.toolStripSeparator2,
-            this.toolStripButton9,
-            this.toolStripButton10,
+            this.undoToolStripButton,
+            this.redoToolStripButton,
             this.toolStripSeparator4,
-            this.toolStripButton12,
-            this.toolStripButton13,
+            this.searchToolStripButton,
+            this.replaceToolStripButton,
             this.toolStripSeparator5,
-            this.toolStripButton14,
-            this.toolStripButton15});
+            this.zoomInToolStripButton,
+            this.zoomOutToolStripButton});
             resources.ApplyResources(this.toolStrip1, "toolStrip1");
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             // 
-            // toolStripButton1
+            // newToolStripButton
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::SkEditor.Properties.Resources.new_file;
-            resources.ApplyResources(this.toolStripButton1, "toolStripButton1");
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.newToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.newToolStripButton.Image = global::SkEditor.Properties.Resources.new_file;
+            resources.ApplyResources(this.newToolStripButton, "newToolStripButton");
+            this.newToolStripButton.Name = "newToolStripButton";
+            this.newToolStripButton.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
-            // toolStripButton2
+            // openToolStripButton
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::SkEditor.Properties.Resources.open_file;
-            resources.ApplyResources(this.toolStripButton2, "toolStripButton2");
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            this.openToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.openToolStripButton.Image = global::SkEditor.Properties.Resources.open_file;
+            resources.ApplyResources(this.openToolStripButton, "openToolStripButton");
+            this.openToolStripButton.Name = "openToolStripButton";
+            this.openToolStripButton.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
-            // toolStripButton3
+            // saveToolStripButton
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = global::SkEditor.Properties.Resources.save_file;
-            resources.ApplyResources(this.toolStripButton3, "toolStripButton3");
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            this.saveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.saveToolStripButton.Image = global::SkEditor.Properties.Resources.save_file;
+            resources.ApplyResources(this.saveToolStripButton, "saveToolStripButton");
+            this.saveToolStripButton.Name = "saveToolStripButton";
+            this.saveToolStripButton.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
-            // toolStripButton4
+            // closeToolStripButton
             // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = global::SkEditor.Properties.Resources.close_file;
-            resources.ApplyResources(this.toolStripButton4, "toolStripButton4");
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            this.closeToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.closeToolStripButton.Image = global::SkEditor.Properties.Resources.close_file;
+            resources.ApplyResources(this.closeToolStripButton, "closeToolStripButton");
+            this.closeToolStripButton.Name = "closeToolStripButton";
+            this.closeToolStripButton.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
-            // toolStripButton5
+            // closeAllToolStripButton
             // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = global::SkEditor.Properties.Resources.close_all;
-            resources.ApplyResources(this.toolStripButton5, "toolStripButton5");
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
+            this.closeAllToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.closeAllToolStripButton.Image = global::SkEditor.Properties.Resources.close_all;
+            resources.ApplyResources(this.closeAllToolStripButton, "closeAllToolStripButton");
+            this.closeAllToolStripButton.Name = "closeAllToolStripButton";
+            this.closeAllToolStripButton.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
-            // toolStripButton11
+            // codeSkriptToolStripButton
             // 
-            this.toolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton11.Image = global::SkEditor.Properties.Resources.pastebin;
-            resources.ApplyResources(this.toolStripButton11, "toolStripButton11");
-            this.toolStripButton11.Name = "toolStripButton11";
-            this.toolStripButton11.Click += new System.EventHandler(this.toolStripButton11_Click);
+            this.codeSkriptToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.codeSkriptToolStripButton.Image = global::SkEditor.Properties.Resources.skript;
+            resources.ApplyResources(this.codeSkriptToolStripButton, "codeSkriptToolStripButton");
+            this.codeSkriptToolStripButton.Name = "codeSkriptToolStripButton";
+            this.codeSkriptToolStripButton.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
             // 
-            // toolStripButton6
+            // cutToolStripButton
             // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = global::SkEditor.Properties.Resources.cut;
-            resources.ApplyResources(this.toolStripButton6, "toolStripButton6");
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
+            this.cutToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.cutToolStripButton.Image = global::SkEditor.Properties.Resources.cut;
+            resources.ApplyResources(this.cutToolStripButton, "cutToolStripButton");
+            this.cutToolStripButton.Name = "cutToolStripButton";
+            this.cutToolStripButton.Click += new System.EventHandler(this.toolStripButton6_Click);
             // 
-            // toolStripButton7
+            // copyToolStripButton
             // 
-            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton7.Image = global::SkEditor.Properties.Resources.copy_file;
-            resources.ApplyResources(this.toolStripButton7, "toolStripButton7");
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
+            this.copyToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.copyToolStripButton.Image = global::SkEditor.Properties.Resources.copy_file;
+            resources.ApplyResources(this.copyToolStripButton, "copyToolStripButton");
+            this.copyToolStripButton.Name = "copyToolStripButton";
+            this.copyToolStripButton.Click += new System.EventHandler(this.toolStripButton7_Click);
             // 
-            // toolStripButton8
+            // pasteToolStripButton
             // 
-            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton8.Image = global::SkEditor.Properties.Resources.paste_file;
-            resources.ApplyResources(this.toolStripButton8, "toolStripButton8");
-            this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Click += new System.EventHandler(this.toolStripButton8_Click);
+            this.pasteToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.pasteToolStripButton.Image = global::SkEditor.Properties.Resources.paste_file;
+            resources.ApplyResources(this.pasteToolStripButton, "pasteToolStripButton");
+            this.pasteToolStripButton.Name = "pasteToolStripButton";
+            this.pasteToolStripButton.Click += new System.EventHandler(this.toolStripButton8_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
             // 
-            // toolStripButton9
+            // undoToolStripButton
             // 
-            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton9.Image = global::SkEditor.Properties.Resources.undo_b;
-            resources.ApplyResources(this.toolStripButton9, "toolStripButton9");
-            this.toolStripButton9.Name = "toolStripButton9";
-            this.toolStripButton9.Click += new System.EventHandler(this.toolStripButton9_Click);
+            this.undoToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.undoToolStripButton.Image = global::SkEditor.Properties.Resources.undo_b;
+            resources.ApplyResources(this.undoToolStripButton, "undoToolStripButton");
+            this.undoToolStripButton.Name = "undoToolStripButton";
+            this.undoToolStripButton.Click += new System.EventHandler(this.toolStripButton9_Click);
             // 
-            // toolStripButton10
+            // redoToolStripButton
             // 
-            this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton10.Image = global::SkEditor.Properties.Resources.redo_b;
-            resources.ApplyResources(this.toolStripButton10, "toolStripButton10");
-            this.toolStripButton10.Name = "toolStripButton10";
-            this.toolStripButton10.Click += new System.EventHandler(this.toolStripButton10_Click);
+            this.redoToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.redoToolStripButton.Image = global::SkEditor.Properties.Resources.redo_b;
+            resources.ApplyResources(this.redoToolStripButton, "redoToolStripButton");
+            this.redoToolStripButton.Name = "redoToolStripButton";
+            this.redoToolStripButton.Click += new System.EventHandler(this.toolStripButton10_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
             // 
-            // toolStripButton12
+            // searchToolStripButton
             // 
-            this.toolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton12.Image = global::SkEditor.Properties.Resources.search;
-            resources.ApplyResources(this.toolStripButton12, "toolStripButton12");
-            this.toolStripButton12.Name = "toolStripButton12";
-            this.toolStripButton12.Click += new System.EventHandler(this.toolStripButton12_Click);
+            this.searchToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.searchToolStripButton.Image = global::SkEditor.Properties.Resources.search;
+            resources.ApplyResources(this.searchToolStripButton, "searchToolStripButton");
+            this.searchToolStripButton.Name = "searchToolStripButton";
+            this.searchToolStripButton.Click += new System.EventHandler(this.toolStripButton12_Click);
             // 
-            // toolStripButton13
+            // replaceToolStripButton
             // 
-            this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton13.Image = global::SkEditor.Properties.Resources.replace;
-            resources.ApplyResources(this.toolStripButton13, "toolStripButton13");
-            this.toolStripButton13.Name = "toolStripButton13";
-            this.toolStripButton13.Click += new System.EventHandler(this.toolStripButton13_Click);
+            this.replaceToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.replaceToolStripButton.Image = global::SkEditor.Properties.Resources.replace;
+            resources.ApplyResources(this.replaceToolStripButton, "replaceToolStripButton");
+            this.replaceToolStripButton.Name = "replaceToolStripButton";
+            this.replaceToolStripButton.Click += new System.EventHandler(this.toolStripButton13_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
             // 
-            // toolStripButton14
+            // zoomInToolStripButton
             // 
-            this.toolStripButton14.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton14.Image = global::SkEditor.Properties.Resources.zoom_in;
-            resources.ApplyResources(this.toolStripButton14, "toolStripButton14");
-            this.toolStripButton14.Name = "toolStripButton14";
-            this.toolStripButton14.Click += new System.EventHandler(this.toolStripButton14_Click);
+            this.zoomInToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.zoomInToolStripButton.Image = global::SkEditor.Properties.Resources.zoom_in;
+            resources.ApplyResources(this.zoomInToolStripButton, "zoomInToolStripButton");
+            this.zoomInToolStripButton.Name = "zoomInToolStripButton";
+            this.zoomInToolStripButton.Click += new System.EventHandler(this.toolStripButton14_Click);
             // 
-            // toolStripButton15
+            // zoomOutToolStripButton
             // 
-            this.toolStripButton15.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton15.Image = global::SkEditor.Properties.Resources.zoom_out;
-            resources.ApplyResources(this.toolStripButton15, "toolStripButton15");
-            this.toolStripButton15.Name = "toolStripButton15";
-            this.toolStripButton15.Click += new System.EventHandler(this.toolStripButton15_Click);
+            this.zoomOutToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.zoomOutToolStripButton.Image = global::SkEditor.Properties.Resources.zoom_out;
+            resources.ApplyResources(this.zoomOutToolStripButton, "zoomOutToolStripButton");
+            this.zoomOutToolStripButton.Name = "zoomOutToolStripButton";
+            this.zoomOutToolStripButton.Click += new System.EventHandler(this.toolStripButton15_Click);
             // 
             // menuStrip1
             // 
@@ -372,7 +366,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
-            this.settingsToolStripMenuItem,
             this.skriptDocumentationToolStripMenuItem,
             this.otherToolStripMenuItem});
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
@@ -386,10 +379,11 @@
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem,
             this.toolStripMenuItem4,
-            this.pastebinToolStripMenuItem,
+            this.skriptToolStripMenuItem,
             this.toolStripMenuItem3,
             this.closeToolStripMenuItem,
             this.closeAllToolStripMenuItem,
+            this.toolStripSeparator6,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
@@ -420,12 +414,12 @@
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             resources.ApplyResources(this.toolStripMenuItem4, "toolStripMenuItem4");
             // 
-            // pastebinToolStripMenuItem
+            // skriptToolStripMenuItem
             // 
-            this.pastebinToolStripMenuItem.Image = global::SkEditor.Properties.Resources.pastebin;
-            this.pastebinToolStripMenuItem.Name = "pastebinToolStripMenuItem";
-            resources.ApplyResources(this.pastebinToolStripMenuItem, "pastebinToolStripMenuItem");
-            this.pastebinToolStripMenuItem.Click += new System.EventHandler(this.pastebinToolStripMenuItem_Click);
+            this.skriptToolStripMenuItem.Image = global::SkEditor.Properties.Resources.skript;
+            this.skriptToolStripMenuItem.Name = "skriptToolStripMenuItem";
+            resources.ApplyResources(this.skriptToolStripMenuItem, "skriptToolStripMenuItem");
+            this.skriptToolStripMenuItem.Click += new System.EventHandler(this.skriptToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
@@ -527,60 +521,6 @@
             resources.ApplyResources(this.replaceToolStripMenuItem, "replaceToolStripMenuItem");
             this.replaceToolStripMenuItem.Click += new System.EventHandler(this.replaceToolStripMenuItem_Click);
             // 
-            // settingsToolStripMenuItem
-            // 
-            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.modeToolStripMenuItem,
-            this.languageToolStripMenuItem});
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            resources.ApplyResources(this.settingsToolStripMenuItem, "settingsToolStripMenuItem");
-            // 
-            // modeToolStripMenuItem
-            // 
-            this.modeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lightToolStripMenuItem,
-            this.darkToolStripMenuItem});
-            this.modeToolStripMenuItem.Image = global::SkEditor.Properties.Resources.change_theme;
-            this.modeToolStripMenuItem.Name = "modeToolStripMenuItem";
-            resources.ApplyResources(this.modeToolStripMenuItem, "modeToolStripMenuItem");
-            // 
-            // lightToolStripMenuItem
-            // 
-            this.lightToolStripMenuItem.Image = global::SkEditor.Properties.Resources.x_mark_16;
-            this.lightToolStripMenuItem.Name = "lightToolStripMenuItem";
-            resources.ApplyResources(this.lightToolStripMenuItem, "lightToolStripMenuItem");
-            this.lightToolStripMenuItem.Click += new System.EventHandler(this.lightToolStripMenuItem_Click);
-            // 
-            // darkToolStripMenuItem
-            // 
-            this.darkToolStripMenuItem.Image = global::SkEditor.Properties.Resources.x_mark_16;
-            this.darkToolStripMenuItem.Name = "darkToolStripMenuItem";
-            resources.ApplyResources(this.darkToolStripMenuItem, "darkToolStripMenuItem");
-            this.darkToolStripMenuItem.Click += new System.EventHandler(this.darkToolStripMenuItem_Click);
-            // 
-            // languageToolStripMenuItem
-            // 
-            this.languageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.englishToolStripMenuItem,
-            this.polskiToolStripMenuItem});
-            this.languageToolStripMenuItem.Image = global::SkEditor.Properties.Resources.language;
-            this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
-            resources.ApplyResources(this.languageToolStripMenuItem, "languageToolStripMenuItem");
-            // 
-            // englishToolStripMenuItem
-            // 
-            this.englishToolStripMenuItem.Image = global::SkEditor.Properties.Resources.x_mark_16;
-            this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
-            resources.ApplyResources(this.englishToolStripMenuItem, "englishToolStripMenuItem");
-            this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
-            // 
-            // polskiToolStripMenuItem
-            // 
-            this.polskiToolStripMenuItem.Image = global::SkEditor.Properties.Resources.x_mark_16;
-            this.polskiToolStripMenuItem.Name = "polskiToolStripMenuItem";
-            resources.ApplyResources(this.polskiToolStripMenuItem, "polskiToolStripMenuItem");
-            this.polskiToolStripMenuItem.Click += new System.EventHandler(this.polskiToolStripMenuItem_Click);
-            // 
             // skriptDocumentationToolStripMenuItem
             // 
             this.skriptDocumentationToolStripMenuItem.Name = "skriptDocumentationToolStripMenuItem";
@@ -599,7 +539,7 @@
             // 
             // joinDiscordToolStripMenuItem
             // 
-            this.joinDiscordToolStripMenuItem.Image = global::SkEditor.Properties.Resources.discord_logo;
+            this.joinDiscordToolStripMenuItem.Image = global::SkEditor.Properties.Resources.discord_old;
             this.joinDiscordToolStripMenuItem.Name = "joinDiscordToolStripMenuItem";
             resources.ApplyResources(this.joinDiscordToolStripMenuItem, "joinDiscordToolStripMenuItem");
             this.joinDiscordToolStripMenuItem.Click += new System.EventHandler(this.joinDiscordToolStripMenuItem_Click);
@@ -613,23 +553,28 @@
             // 
             // aboutSkEditorToolStripMenuItem
             // 
-            this.aboutSkEditorToolStripMenuItem.Image = global::SkEditor.Properties.Resources.about;
-            this.aboutSkEditorToolStripMenuItem.Name = "aboutSkEditorToolStripMenuItem";
             resources.ApplyResources(this.aboutSkEditorToolStripMenuItem, "aboutSkEditorToolStripMenuItem");
+            this.aboutSkEditorToolStripMenuItem.Name = "aboutSkEditorToolStripMenuItem";
             this.aboutSkEditorToolStripMenuItem.Click += new System.EventHandler(this.aboutSkEditorToolStripMenuItem_Click);
+            // 
+            // settingsToolStripMenuItem1
+            // 
+            this.settingsToolStripMenuItem1.Image = global::SkEditor.Properties.Resources.settings;
+            this.settingsToolStripMenuItem1.Name = "settingsToolStripMenuItem1";
+            resources.ApplyResources(this.settingsToolStripMenuItem1, "settingsToolStripMenuItem1");
+            this.settingsToolStripMenuItem1.Click += new System.EventHandler(this.settingsToolStripMenuItem1_Click);
             // 
             // subWelcomeLabel
             // 
             resources.ApplyResources(this.subWelcomeLabel, "subWelcomeLabel");
             this.subWelcomeLabel.Name = "subWelcomeLabel";
             // 
-            // settingsToolStripMenuItem1
+            // toolStripSeparator6
             // 
-            this.settingsToolStripMenuItem1.Name = "settingsToolStripMenuItem1";
-            resources.ApplyResources(this.settingsToolStripMenuItem1, "settingsToolStripMenuItem1");
-            this.settingsToolStripMenuItem1.Click += new System.EventHandler(this.settingsToolStripMenuItem1_Click);
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            resources.ApplyResources(this.toolStripSeparator6, "toolStripSeparator6");
             // 
-            // SkEditorOld
+            // SkEditorRemake
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -638,7 +583,7 @@
             this.Controls.Add(this.subWelcomeLabel);
             this.Controls.Add(this.panel1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "SkEditorOld";
+            this.Name = "SkEditorRemake";
             this.Activated += new System.EventHandler(this.SkEditorOld_Activated);
             this.Load += new System.EventHandler(this.SkEditor_Load);
             this.panel1.ResumeLayout(false);
@@ -670,11 +615,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem skriptDocumentationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem otherToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem languageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem joinDiscordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ourWebsiteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
@@ -690,42 +632,39 @@
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeAllToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem polskiToolStripMenuItem;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.ToolStripMenuItem lightToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem darkToolStripMenuItem;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label versionLabel;
         private System.Windows.Forms.ToolStripMenuItem aboutSkEditorToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton newToolStripButton;
+        private System.Windows.Forms.ToolStripButton openToolStripButton;
+        private System.Windows.Forms.ToolStripButton saveToolStripButton;
+        private System.Windows.Forms.ToolStripButton closeToolStripButton;
+        private System.Windows.Forms.ToolStripButton closeAllToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton toolStripButton11;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
-        private System.Windows.Forms.ToolStripButton toolStripButton8;
+        private System.Windows.Forms.ToolStripButton cutToolStripButton;
+        private System.Windows.Forms.ToolStripButton copyToolStripButton;
+        private System.Windows.Forms.ToolStripButton pasteToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripButton9;
-        private System.Windows.Forms.ToolStripButton toolStripButton10;
+        private System.Windows.Forms.ToolStripButton undoToolStripButton;
+        private System.Windows.Forms.ToolStripButton redoToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem pastebinToolStripMenuItem;
-        private System.Windows.Forms.ToolStripButton toolStripButton12;
+        private System.Windows.Forms.ToolStripButton searchToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripButton toolStripButton13;
+        private System.Windows.Forms.ToolStripButton replaceToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem findToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem replaceToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripButton toolStripButton14;
-        private System.Windows.Forms.ToolStripButton toolStripButton15;
+        private System.Windows.Forms.ToolStripButton zoomInToolStripButton;
+        private System.Windows.Forms.ToolStripButton zoomOutToolStripButton;
         private System.Windows.Forms.Label subNameLabel;
         private System.Windows.Forms.Label subWelcomeLabel;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripButton codeSkriptToolStripButton;
+        private System.Windows.Forms.ToolStripMenuItem skriptToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
     }
 }

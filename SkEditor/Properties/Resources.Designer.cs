@@ -113,9 +113,9 @@ namespace SkEditor.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap clipboard_4_161 {
+        internal static System.Drawing.Bitmap close_all {
             get {
-                object obj = ResourceManager.GetObject("clipboard_4_161", resourceCulture);
+                object obj = ResourceManager.GetObject("close_all", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace SkEditor.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap close_all {
+        internal static System.Drawing.Bitmap close_all_old {
             get {
-                object obj = ResourceManager.GetObject("close_all", resourceCulture);
+                object obj = ResourceManager.GetObject("close_all_old", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace SkEditor.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap copy_161 {
+        internal static System.Drawing.Bitmap close_file_old {
             get {
-                object obj = ResourceManager.GetObject("copy_161", resourceCulture);
+                object obj = ResourceManager.GetObject("close_file_old", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,6 +163,16 @@ namespace SkEditor.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap copy_old {
+            get {
+                object obj = ResourceManager.GetObject("copy_old", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cut {
             get {
                 object obj = ResourceManager.GetObject("cut", resourceCulture);
@@ -173,9 +183,9 @@ namespace SkEditor.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap discord {
+        internal static System.Drawing.Bitmap cut_old {
             get {
-                object obj = ResourceManager.GetObject("discord", resourceCulture);
+                object obj = ResourceManager.GetObject("cut_old", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +196,16 @@ namespace SkEditor.Properties {
         internal static System.Drawing.Bitmap discord_logo {
             get {
                 object obj = ResourceManager.GetObject("discord_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap discord_old {
+            get {
+                object obj = ResourceManager.GetObject("discord_old", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +233,9 @@ namespace SkEditor.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap exit_161 {
+        internal static System.Drawing.Bitmap exit_old {
             get {
-                object obj = ResourceManager.GetObject("exit_161", resourceCulture);
+                object obj = ResourceManager.GetObject("exit_old", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,39 +263,19 @@ namespace SkEditor.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap folder_8_161 {
-            get {
-                object obj = ResourceManager.GetObject("folder_8_161", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap folder_8_32 {
-            get {
-                object obj = ResourceManager.GetObject("folder_8_32", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap folder_8_48 {
-            get {
-                object obj = ResourceManager.GetObject("folder_8_48", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap folder_8_48__1_ {
             get {
                 object obj = ResourceManager.GetObject("folder_8_48__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap info {
+            get {
+                object obj = ResourceManager.GetObject("info", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -333,6 +333,16 @@ namespace SkEditor.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap new_file_old {
+            get {
+                object obj = ResourceManager.GetObject("new_file_old", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap open_file {
             get {
                 object obj = ResourceManager.GetObject("open_file", resourceCulture);
@@ -343,9 +353,29 @@ namespace SkEditor.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap open_old {
+            get {
+                object obj = ResourceManager.GetObject("open_old", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap paste_file {
             get {
                 object obj = ResourceManager.GetObject("paste_file", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap paste_old {
+            get {
+                object obj = ResourceManager.GetObject("paste_old", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -373,39 +403,9 @@ namespace SkEditor.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap plus_3_161 {
-            get {
-                object obj = ResourceManager.GetObject("plus_3_161", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap printer_16 {
-            get {
-                object obj = ResourceManager.GetObject("printer_16", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap redo_16 {
             get {
                 object obj = ResourceManager.GetObject("redo-16", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap redo_161 {
-            get {
-                object obj = ResourceManager.GetObject("redo_161", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -423,9 +423,9 @@ namespace SkEditor.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap repeat_16 {
+        internal static System.Drawing.Bitmap redo_old {
             get {
-                object obj = ResourceManager.GetObject("repeat-16", resourceCulture);
+                object obj = ResourceManager.GetObject("redo_old", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -433,9 +433,9 @@ namespace SkEditor.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap repeat_161 {
+        internal static System.Drawing.Bitmap repeat_16 {
             get {
-                object obj = ResourceManager.GetObject("repeat_161", resourceCulture);
+                object obj = ResourceManager.GetObject("repeat-16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -453,9 +453,9 @@ namespace SkEditor.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap save_16 {
+        internal static System.Drawing.Bitmap replace_old {
             get {
-                object obj = ResourceManager.GetObject("save-16", resourceCulture);
+                object obj = ResourceManager.GetObject("replace_old", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -463,9 +463,9 @@ namespace SkEditor.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap save_161 {
+        internal static System.Drawing.Bitmap save_16 {
             get {
-                object obj = ResourceManager.GetObject("save_161", resourceCulture);
+                object obj = ResourceManager.GetObject("save-16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -483,9 +483,9 @@ namespace SkEditor.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap scissors_7_16 {
+        internal static System.Drawing.Bitmap save_old {
             get {
-                object obj = ResourceManager.GetObject("scissors-7-16", resourceCulture);
+                object obj = ResourceManager.GetObject("save_old", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -493,9 +493,9 @@ namespace SkEditor.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap scissors_7_161 {
+        internal static System.Drawing.Bitmap scissors_7_16 {
             get {
-                object obj = ResourceManager.GetObject("scissors_7_161", resourceCulture);
+                object obj = ResourceManager.GetObject("scissors-7-16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -523,9 +523,19 @@ namespace SkEditor.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap search_15_161 {
+        internal static System.Drawing.Bitmap search_old {
             get {
-                object obj = ResourceManager.GetObject("search_15_161", resourceCulture);
+                object obj = ResourceManager.GetObject("search_old", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap settings {
+            get {
+                object obj = ResourceManager.GetObject("settings", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -546,6 +556,16 @@ namespace SkEditor.Properties {
         internal static System.Drawing.Bitmap SkEditor1 {
             get {
                 object obj = ResourceManager.GetObject("SkEditor1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skript {
+            get {
+                object obj = ResourceManager.GetObject("skript", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -603,9 +623,9 @@ namespace SkEditor.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap undo_161 {
+        internal static System.Drawing.Bitmap undo_b {
             get {
-                object obj = ResourceManager.GetObject("undo_161", resourceCulture);
+                object obj = ResourceManager.GetObject("undo_b", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -613,9 +633,9 @@ namespace SkEditor.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap undo_b {
+        internal static System.Drawing.Bitmap undo_old {
             get {
-                object obj = ResourceManager.GetObject("undo_b", resourceCulture);
+                object obj = ResourceManager.GetObject("undo_old", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -703,6 +723,16 @@ namespace SkEditor.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap zoom_in_old {
+            get {
+                object obj = ResourceManager.GetObject("zoom_in_old", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap zoom_out {
             get {
                 object obj = ResourceManager.GetObject("zoom_out", resourceCulture);
@@ -716,6 +746,16 @@ namespace SkEditor.Properties {
         internal static System.Drawing.Bitmap zoom_out_16 {
             get {
                 object obj = ResourceManager.GetObject("zoom-out-16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zoom_out_old {
+            get {
+                object obj = ResourceManager.GetObject("zoom_out_old", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

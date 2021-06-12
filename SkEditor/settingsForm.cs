@@ -33,18 +33,27 @@ namespace SkEditor
                 this.Text = "Ustawienia";
                 languageGroupBox.Text = "Język";
                 themeGroupBox.Text = "Motyw";
+                iconsGroupBox.Text = "Zestaw ikon";
                 languageComboBox.SelectedIndex = 1;
+
                 themeComboBox.Items[0] = "Jasny";
                 themeComboBox.Items[1] = "Ciemny";
+
+                iconsComboBox.Items[0] = "Domyślny";
+                iconsComboBox.Items[1] = "Klasyczny";
             }
             else if (Properties.Settings.Default.Lang == "English")
             {
                 this.Text = "Settings";
                 languageGroupBox.Text = "Language";
                 themeGroupBox.Text = "Theme";
+                iconsGroupBox.Text = "Icon kit";
                 languageComboBox.SelectedIndex = 0;
                 themeComboBox.Items[0] = "Light";
                 themeComboBox.Items[1] = "Dark";
+
+                iconsComboBox.Items[0] = "Default";
+                iconsComboBox.Items[1] = "Classic";
             }
             
             if (Properties.Settings.Default.Mode == "Light")
@@ -54,6 +63,15 @@ namespace SkEditor
             else if (Properties.Settings.Default.Mode == "Dark")
             {
                 themeComboBox.SelectedIndex = 1;
+            }
+
+            if (Properties.Settings.Default.IconSet == "Default")
+            {
+                iconsComboBox.SelectedIndex = 0;
+            }
+            else if (Properties.Settings.Default.IconSet == "Old")
+            {
+                iconsComboBox.SelectedIndex = 1;
             }
         }
 
@@ -96,10 +114,47 @@ namespace SkEditor
             {
                 Properties.Settings.Default.Lang = "English";
                 Properties.Settings.Default.Save();
+
+                this.Text = "Settings";
+                languageGroupBox.Text = "Language";
+                themeGroupBox.Text = "Theme";
+                iconsGroupBox.Text = "Icon kit";
+                languageComboBox.SelectedIndex = 0;
+                themeComboBox.Items[0] = "Light";
+                themeComboBox.Items[1] = "Dark";
+
+                iconsComboBox.Items[0] = "Default";
+                iconsComboBox.Items[1] = "Classic";
             }
             else if (languageComboBox.SelectedIndex == 1)
             {
                 Properties.Settings.Default.Lang = "Polish";
+                Properties.Settings.Default.Save();
+
+                this.Text = "Ustawienia";
+                languageGroupBox.Text = "Język";
+                themeGroupBox.Text = "Motyw";
+                iconsGroupBox.Text = "Zestaw ikon";
+                languageComboBox.SelectedIndex = 1;
+
+                themeComboBox.Items[0] = "Jasny";
+                themeComboBox.Items[1] = "Ciemny";
+
+                iconsComboBox.Items[0] = "Domyślny";
+                iconsComboBox.Items[1] = "Klasyczny";
+            }
+        }
+
+    private void iconsComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (iconsComboBox.SelectedIndex == 0)
+            {
+                Properties.Settings.Default.IconSet = "Default";
+                Properties.Settings.Default.Save();
+            }
+            else if (iconsComboBox.SelectedIndex == 1)
+            {
+                Properties.Settings.Default.IconSet = "Old";
                 Properties.Settings.Default.Save();
             }
         }

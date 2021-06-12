@@ -85,7 +85,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Numerics" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -224,8 +226,30 @@
     <None Include="Resources\zoom-in.png" />
     <None Include="Resources\about.png" />
     <None Include="Resources\discord.png" />
-    <None Include="Resources\website.png" />
     <None Include="Resources\discord-logo.png" />
+    <None Include="Resources\skript.png" />
+    <None Include="Resources\book-stack-161.png" />
+    <None Include="Resources\clipboard-4-162.png" />
+    <None Include="Resources\zoom-out-old.png" />
+    <None Include="Resources\close-all-old.png" />
+    <None Include="Resources\close-file-old.png" />
+    <None Include="Resources\copy-old.png" />
+    <None Include="Resources\cut-old.png" />
+    <None Include="Resources\new-file-old.png" />
+    <None Include="Resources\open-old.png" />
+    <None Include="Resources\paste-old.png" />
+    <None Include="Resources\redo-old.png" />
+    <None Include="Resources\repeat-old.png" />
+    <None Include="Resources\save-old.png" />
+    <None Include="Resources\search-old.png" />
+    <None Include="Resources\undo-old.png" />
+    <None Include="Resources\zoom-in-old.png" />
+    <None Include="Resources\discord-old.png" />
+    <None Include="Resources\website.png" />
+    <None Include="Resources\info-512.png" />
+    <None Include="Resources\info-512 %281%29.png" />
+    <None Include="Resources\settings-4-512.png" />
+    <None Include="Resources\exit-512.png" />
     <Content Include="Skript-Code-Editor-Icon.ico" />
   </ItemGroup>
   <ItemGroup>
