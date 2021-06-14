@@ -27,7 +27,7 @@ namespace SkEditor
 {
     public partial class SkEditorRemake : Form
     {
-        public string version = "v0.2 Alpha";
+        public string version = "v0.2.1 Alpha";
 
         public static class Environment
         {
@@ -39,8 +39,6 @@ namespace SkEditor
             InitializeComponent();
         }
 
-
-
         public static string ready = "false";
 
         private void SkEditor_Load(object sender, EventArgs e)
@@ -49,22 +47,38 @@ namespace SkEditor
             client.Logger = new ConsoleLogger() { Level = LogLevel.Warning };
             client.Initialize();
 
-            client.SetPresence(new DiscordRPC.RichPresence()
+            if (Properties.Settings.Default.Lang == "Polish")
             {
-                Details = "Test1",
-                State = "Test2",
-                Timestamps = Timestamps.Now,
-                Buttons = new DiscordRPC.Button[]
+                client.SetPresence(new DiscordRPC.RichPresence()
                 {
-                    new DiscordRPC.Button() { Label = "Pobierz SkEditor Remake", Url = "https://github.com/NotroDev/SkEditor-Remake" }
-                },
-                Assets = new Assets()
+                    Timestamps = Timestamps.Now,
+                    Buttons = new DiscordRPC.Button[]
+                    {
+                        new DiscordRPC.Button() { Label = "Pobierz SkEditor Remake", Url = "https://github.com/NotroDev/SkEditor-Remake" }
+                    },
+                    Assets = new Assets()
+                    {
+                        LargeImageKey = "skeditor_large",
+                        LargeImageText = "SkEditor Remake"
+                    }
+                });
+            }
+            else if (Properties.Settings.Default.Lang == "English")
+            {
+                client.SetPresence(new DiscordRPC.RichPresence()
                 {
-                    LargeImageKey = "skeditor_large",
-                    LargeImageText = "SkEditor Remake"
-                }
-            });
-
+                    Timestamps = Timestamps.Now,
+                    Buttons = new DiscordRPC.Button[]
+                    {
+                        new DiscordRPC.Button() { Label = "Download SkEditor Remake", Url = "https://github.com/NotroDev/SkEditor-Remake" }
+                    },
+                    Assets = new Assets()
+                    {
+                        LargeImageKey = "skeditor_large",
+                        LargeImageText = "SkEditor Remake"
+                    }
+                });
+            }
             menuStrip1.Renderer = new CustomProfessionalRenderer();
 
             Directory.CreateDirectory("C:\\ProgramData\\SkEditor\\");
@@ -137,6 +151,9 @@ namespace SkEditor
 
         public void setLang(string LangString)
         {
+            DiscordRpcClient client = new DiscordRpcClient("853260040663728135");
+            client.Logger = new ConsoleLogger() { Level = LogLevel.Warning };
+            client.Initialize();
             if (LangString == "polish")
             {
                 fileToolStripMenuItem.Text = "Plik";
@@ -178,6 +195,8 @@ namespace SkEditor
                 zoomOutToolStripButton.Text = "Oddal";
                 otherToolStripMenuItem.Text = "Inne";
                 settingsToolStripMenuItem1.Text = "Ustawienia";
+                codeSkriptToolStripButton.Text = "Opublikuj kod na code.skript.pl";
+                skriptToolStripMenuItem.Text = "Opublikuj kod";
             }
             else if (LangString == "english")
             {
@@ -220,6 +239,8 @@ namespace SkEditor
                 zoomOutToolStripButton.Text = "Zoom out";
                 otherToolStripMenuItem.Text = "Other";
                 settingsToolStripMenuItem1.Text = "Settings";
+                codeSkriptToolStripButton.Text = "Publish the file on code.skript.pl";
+                skriptToolStripMenuItem.Text = "Publish the code";
             }
         }
 
@@ -404,16 +425,6 @@ namespace SkEditor
             }
 
             e.ChangedRange.ClearStyle(red, blue, green, yellow, gray);
-            //red
-            /*
-            while (events.Read())
-            {
-                if (events.Value != null)
-                {
-                    e.ChangedRange.SetStyle(red, "on " + events.Value.ToString().ToLower());
-                }
-            }
-            */
             e.ChangedRange.SetStyle(green, "console");
             //red
             e.ChangedRange.SetStyle(red, "command");

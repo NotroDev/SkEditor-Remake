@@ -24,7 +24,7 @@ namespace SkEditor
                 questionLabel.Text = "Co to jest SkEditor?";
                 question2Label.Text = "Co to jest SkEditor Remake?";
 
-                answerLabel.Text = "SkEditor to edytor skryptów tworzonych w pluginie Skript w grze Minecraft.\nStworzony został przez Michix.\nProjekt został porzucony.";
+                answerLabel.Text = "SkEditor to edytor skryptów tworzonych w pluginie Skript w grze Minecraft.\nStworzony został przez Michixa.\nProjekt został porzucony.";
                 answer2Label.Text = "SkEditor Remake to przerobiona i ulepszona wersja SkEditora.\nProgram został stworzony ze względu na porzucenie oryginalnego.\nTworzony jest przez NotroDeva.";
             }
             else

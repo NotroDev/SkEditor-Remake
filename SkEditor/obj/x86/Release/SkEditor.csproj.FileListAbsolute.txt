@@ -25,3 +25,8 @@ C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Release\SkEditor Remak
 C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Release\SkEditor Remake.pdb
 C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Release\SkEditor.settingsForm.resources
 C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Release\SkEditor.SkEditorRemake.resources
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\bin\Release\SkEditor Remake.exe.manifest
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\bin\Release\SkEditor Remake.application
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Release\SkEditor Remake.TrustInfo.xml
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Release\SkEditor Remake.exe.manifest
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Release\SkEditor Remake.application
