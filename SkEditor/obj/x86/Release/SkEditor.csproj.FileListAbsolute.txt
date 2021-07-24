@@ -1,0 +1,32 @@
+C:\Users\T@L@R\Documents\Visual Studio 2010\Projects\SkEditor\SkEditor\obj\x86\Release\SkEditor.Properties.Resources.resources
+C:\Users\T@L@R\Documents\Visual Studio 2010\Projects\SkEditor\SkEditor\obj\x86\Release\SkEditor.csproj.GenerateResource.Cache
+C:\Users\T@L@R\Documents\Visual Studio 2010\Projects\SkEditor\SkEditor\bin\Release\SkEditor.exe.config
+C:\Users\T@L@R\Documents\Visual Studio 2010\Projects\SkEditor\SkEditor\obj\x86\Release\SkEditor.Form1.resources
+C:\Users\T@L@R\Documents\Visual Studio 2010\Projects\SkEditor\SkEditor\obj\x86\Release\SkEditor.SkEditor.resources
+C:\Users\Komputer\Desktop\Michał\SkEditor\SkEditor\obj\x86\Release\SkEditor.Properties.Resources.resources
+C:\Users\Komputer\Desktop\Michał\SkEditor\SkEditor\obj\x86\Release\SkEditor.SkEditor.resources
+C:\Users\Komputer\Desktop\Michał\SkEditor\SkEditor\obj\x86\Release\SkEditor.csproj.GenerateResource.cache
+C:\Users\Komputer\Desktop\Michał\SkEditor\SkEditor\obj\x86\Release\SkEditor.csproj.CoreCompileInputs.cache
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Release\SkEditor.csprojAssemblyReference.cache
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Release\SkEditor.Properties.Resources.resources
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Release\SkEditor.csproj.GenerateResource.cache
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Release\SkEditor.csproj.CoreCompileInputs.cache
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\bin\Release\DiscordRPC.dll
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\bin\Release\Newtonsoft.Json.dll
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\bin\Release\DiscordRPC.pdb
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\bin\Release\DiscordRPC.xml
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\bin\Release\Newtonsoft.Json.xml
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Release\SkEditor.AboutSkEditorRemake.resources
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Release\SkEditor.csproj.CopyComplete
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\bin\Release\SkEditor Remake.exe.config
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\bin\Release\SkEditor Remake.exe
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\bin\Release\SkEditor Remake.pdb
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Release\SkEditor Remake.exe
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Release\SkEditor Remake.pdb
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Release\SkEditor.settingsForm.resources
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Release\SkEditor.SkEditorRemake.resources
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\bin\Release\SkEditor Remake.exe.manifest
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\bin\Release\SkEditor Remake.application
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Release\SkEditor Remake.TrustInfo.xml
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Release\SkEditor Remake.exe.manifest
+C:\Users\pawku\Documents\GitHub\SkEditor\SkEditor\obj\x86\Release\SkEditor Remake.application
