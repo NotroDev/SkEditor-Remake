@@ -1,0 +1,44 @@
+D:\Michał\Visual Studio\GlitchCode\GlitchCode\bin\Debug\GlitchCode.exe.config
+D:\Michał\Visual Studio\GlitchCode\GlitchCode\bin\Debug\GlitchCode.exe
+D:\Michał\Visual Studio\GlitchCode\GlitchCode\bin\Debug\GlitchCode.pdb
+D:\Michał\Visual Studio\GlitchCode\GlitchCode\obj\Debug\GlitchCode.csproj.AssemblyReference.cache
+D:\Michał\Visual Studio\GlitchCode\GlitchCode\obj\Debug\App.g.cs
+D:\Michał\Visual Studio\GlitchCode\GlitchCode\obj\Debug\GlitchCode_MarkupCompile.cache
+D:\Michał\Visual Studio\GlitchCode\GlitchCode\obj\Debug\GlitchCode_MarkupCompile.lref
+D:\Michał\Visual Studio\GlitchCode\GlitchCode\obj\Debug\GlitchCode.g.resources
+D:\Michał\Visual Studio\GlitchCode\GlitchCode\obj\Debug\GlitchCode.Properties.Resources.resources
+D:\Michał\Visual Studio\GlitchCode\GlitchCode\obj\Debug\GlitchCode.csproj.GenerateResource.cache
+D:\Michał\Visual Studio\GlitchCode\GlitchCode\obj\Debug\GlitchCode.csproj.CoreCompileInputs.cache
+D:\Michał\Visual Studio\GlitchCode\GlitchCode\obj\Debug\GlitchCode.exe
+D:\Michał\Visual Studio\GlitchCode\GlitchCode\obj\Debug\GlitchCode.pdb
+D:\Michał\Visual Studio\GlitchCode\GlitchCode\bin\Debug\ICSharpCode.AvalonEdit.dll
+D:\Michał\Visual Studio\GlitchCode\GlitchCode\bin\Debug\ICSharpCode.AvalonEdit.xml
+D:\Michał\Visual Studio\GlitchCode\GlitchCode\obj\Debug\GlitchCode.csproj.CopyComplete
+D:\Michał\Visual Studio\GlitchCode\GlitchCode\bin\Debug\DiscordRPC.dll
+D:\Michał\Visual Studio\GlitchCode\GlitchCode\bin\Debug\Newtonsoft.Json.dll
+D:\Michał\Visual Studio\GlitchCode\GlitchCode\bin\Debug\DiscordRPC.pdb
+D:\Michał\Visual Studio\GlitchCode\GlitchCode\bin\Debug\DiscordRPC.xml
+D:\Michał\Visual Studio\GlitchCode\GlitchCode\bin\Debug\Newtonsoft.Json.xml
+D:\Michał\Visual Studio\GlitchCode\GlitchCode\obj\Debug\MainWindow.g.cs
+D:\Michał\Visual Studio\GlitchCode\GlitchCode\obj\Debug\MainWindow.baml
+D:\Michał\Visual Studio\GlitchCode\GlitchCode\obj\Debug\DialogWindow.g.cs
+D:\Michał\Visual Studio\GlitchCode\GlitchCode\obj\Debug\DialogWindow.baml
+C:\Users\pawku\Desktop\GlitchCode\obj\Debug\GlitchCode.csprojAssemblyReference.cache
+C:\Users\pawku\Desktop\GlitchCode\obj\Debug\MainWindow.g.cs
+C:\Users\pawku\Desktop\GlitchCode\obj\Debug\DialogWindow.g.cs
+C:\Users\pawku\Desktop\GlitchCode\obj\Debug\App.g.cs
+C:\Users\pawku\Desktop\GlitchCode\obj\Debug\GlitchCode_MarkupCompile.cache
+C:\Users\pawku\Desktop\GlitchCode\obj\Debug\GlitchCode_MarkupCompile.lref
+C:\Users\pawku\Desktop\GlitchCode\obj\Debug\GlitchCode.exe
+C:\Users\pawku\Desktop\GlitchCode\obj\Debug\GlitchCode.pdb
+C:\Users\pawku\Desktop\GlitchCode\bin\Debug\GlitchCode.exe.config
+C:\Users\pawku\Desktop\GlitchCode\bin\Debug\GlitchCode.exe
+C:\Users\pawku\Desktop\GlitchCode\bin\Debug\GlitchCode.pdb
+C:\Users\pawku\Desktop\GlitchCode\bin\Debug\ICSharpCode.AvalonEdit.xml
+C:\Users\pawku\Desktop\GlitchCode\obj\Debug\MainWindow.baml
+C:\Users\pawku\Desktop\GlitchCode\obj\Debug\DialogWindow.baml
+C:\Users\pawku\Desktop\GlitchCode\obj\Debug\GlitchCode.g.resources
+C:\Users\pawku\Desktop\GlitchCode\obj\Debug\GlitchCode.Properties.Resources.resources
+C:\Users\pawku\Desktop\GlitchCode\obj\Debug\GlitchCode.csproj.GenerateResource.cache
+C:\Users\pawku\Desktop\GlitchCode\obj\Debug\GlitchCode.csproj.CoreCompileInputs.cache
+C:\Users\pawku\Desktop\GlitchCode\obj\Debug\GlitchCode.csproj.CopyComplete

@@ -1,0 +1,88 @@
+﻿<Window x:Class="SkEditorRemake.DialogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SkEditorRemake" xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit"
+        mc:Ignorable="d"
+        Closing="Window_Closing"
+        Title="SkEditor Remake" 
+        Icon="Images/SkEditor.ico" 
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="Transparent" 
+        AllowsTransparency="True"
+        WindowStyle="None" 
+        Width="256" 
+        Height="128">
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.5" FillBehavior="HoldEnd" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+    <Window.Resources>
+        <ControlTemplate x:Key="Button1" TargetType="Button">
+            <Border x:Name="Border" CornerRadius="5" Background="#23272A" BorderBrush="#23272A" BorderThickness="1" SnapsToDevicePixels="True">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" TargetName="Border" Value="#2a4a5b"/>
+                    <Setter Property="BorderBrush" TargetName="Border" Value="#26a0da"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <Style x:Key="Buttons" TargetType="{x:Type Ellipse}">
+            <Setter Property="Opacity" Value="0.25" />
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                  To="1" Duration="0:0:0.2" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                    <Trigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                  To="0.25" Duration="0:0:0.2" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.ExitActions>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Border Background="#2C2F33" CornerRadius="10">
+        <Grid Loaded="DialogWindow_Loaded">
+            <Image 
+                Source="Images/SkEditor.png"
+                RenderOptions.BitmapScalingMode="HighQuality"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left" 
+                RenderTransformOrigin="28.887,-0.097" 
+                Height="26" 
+                Margin="10,10,0,0" 
+                Width="23" Grid.RowSpan="2"/>
+            <Image 
+                Source="Images/close2.png" 
+                RenderOptions.BitmapScalingMode="HighQuality"
+                RenderTransformOrigin="28.887,-0.097" 
+                Height="20" 
+                Margin="0,7,10,0" 
+                Width="20" Cursor="Hand" MouseLeftButtonDown="closeButton_Click" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+            <TextBlock FontFamily="/GlitchCode;component/Fonts/#Open Sans" FontSize="16" UseLayoutRounding="False" Margin="65,10,65,0" Text="SkEditor Remake" Foreground="#FFDDDDDD" VerticalAlignment="Top" Height="22" RenderTransformOrigin="0.78,0.447"/>
+            <Label Name="TextLabel" MinWidth="236" MinHeight="55" FontFamily="/GlitchCode;component/Fonts/#Open Sans" Content="None" Foreground="White" Margin="10,37,10,36" FontSize="14" Background="Transparent"/>
+            <Button x:Name="noButton" IsCancel="True" Template="{StaticResource Button1}" Margin="193,97,10,8" Content="No" FontFamily="/GlitchCode;component/Fonts/#Open Sans" Foreground="White"/>
+            <Button x:Name="yesButton" IsDefault="True" Template="{StaticResource Button1}" Margin="135,97,68,8" Content="Yes" FontFamily="/GlitchCode;component/Fonts/#Open Sans" Foreground="White" Click="yesButton_Click"/>
+        </Grid>
+    </Border>
+</Window>
