@@ -91,7 +91,7 @@
         <KeyBinding Modifiers="Ctrl" Key="W" Command="ApplicationCommands.Close"/>
     </Window.InputBindings>
     <Border x:Name="Border" Background="#2C2F33" CornerRadius="10">
-        <Grid>
+        <Grid x:Name="editorGrid">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="587*"/>
                 <ColumnDefinition Width="213*"/>

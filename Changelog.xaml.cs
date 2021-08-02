@@ -12,22 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
+using System.IO.Compression;
+using System.Net;
 
 namespace SkEditorRemake
 {
     /// <summary>
     /// Logika interakcji dla klasy SettingsWindow.xaml
     /// </summary>
-    public partial class SettingsWindow : Window
+    public partial class ChangelogWindow : Window
     {
-        public SettingsWindow()
+        public ChangelogWindow()
         {
             InitializeComponent();
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            ChangeLanguage();
         }
 
         private void nameLabelMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -51,32 +49,18 @@ namespace SkEditorRemake
             Close();
         }
 
-        private void languageComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void changelogTextBlock_Loaded(object sender, RoutedEventArgs e)
         {
-            if (languageComboBox.SelectedIndex == 0)
+            try
             {
-                Properties.Settings.Default.Language = "English";
-                Properties.Settings.Default.Save();
+                WebClient webClient = new WebClient();
+                string changelogText = webClient.DownloadString("https://drive.google.com/uc?export=download&id=1CrEFe5-aLZvBLiXLoBlgF0MAL9hB_zx0");
+                changelogTextblock.Text = changelogText;
             }
-            else if (languageComboBox.SelectedIndex == 1)
+            catch
             {
-                Properties.Settings.Default.Language = "Polish";
-                Properties.Settings.Default.Save();
-            }
-            ChangeLanguage();
-        }
-
-        private void ChangeLanguage()
-        {
-            if (Properties.Settings.Default.Language == "English")
-            {
-                languageComboBox.SelectedIndex = 0;
-                languageText.Text = "Language";
-            }
-            else if (Properties.Settings.Default.Language == "Polish")
-            {
-                languageComboBox.SelectedIndex = 1;
-                languageText.Text = "Język";
+                OKDialogWindow.showOKDialog("Nie masz internetu, przez co nie\n można wyświetlić changelogu.");
+                changelogTextblock.Text = "Pustka...";
             }
         }
     }

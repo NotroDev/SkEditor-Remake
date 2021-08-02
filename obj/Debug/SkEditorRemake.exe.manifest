@@ -55,14 +55,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SkEditorRemake.exe" size="470016">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SkEditorRemake.exe" size="475648">
       <assemblyIdentity name="SkEditorRemake" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jvrs9fY6+q+AIpdla7vHj5CY9MlEY4B+TKaL5l78XCk=</dsig:DigestValue>
+        <dsig:DigestValue>lOqP969WQGrHVZpTs3PtDyfhWvs7m8vy3aD32w82FGM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="YamlDotNet.dll" size="222208">
+      <assemblyIdentity name="YamlDotNet" version="11.0.0.0" publicKeyToken="EC19458F3C15AF5E" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>8k1XoXhJ9YI5Vhunhy8qpov2yA82Wg/Nau7wa0RAtHY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -75,13 +87,13 @@
       <dsig:DigestValue>pcUzJA4ff8v+hhO3VELKYvYqBedKb8Yt6/MTb1Wry6Y=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SkEditorRemake.exe.config" size="1429">
+  <file name="SkEditorRemake.exe.config" size="1294">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>WORPoeMkymDTyVe0biBJl3ipUN+VsXmlIkdwxtYa4FU=</dsig:DigestValue>
+      <dsig:DigestValue>t3WomFFcJmiqUdZDlJtWU6HG0Dn6vt+tkcH5jjbbGB4=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

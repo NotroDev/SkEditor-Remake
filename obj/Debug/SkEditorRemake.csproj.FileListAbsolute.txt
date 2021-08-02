@@ -29,3 +29,8 @@ C:\Users\pawku\Desktop\Glitchcode\obj\Debug\InformationsWindow.g.cs
 C:\Users\pawku\Desktop\Glitchcode\obj\Debug\InformationsWindow.baml
 C:\Users\pawku\Desktop\Glitchcode\bin\Debug\SkriptHighlighting.xshd
 C:\Users\pawku\Desktop\Glitchcode\obj\Debug\SkEditorRemake.csproj.AssemblyReference.cache
+C:\Users\pawku\Desktop\Glitchcode\bin\Debug\test.yml
+C:\Users\pawku\Desktop\Glitchcode\bin\Debug\YamlDotNet.dll
+C:\Users\pawku\Desktop\Glitchcode\bin\Debug\YamlDotNet.xml
+C:\Users\pawku\Desktop\Glitchcode\obj\Debug\Changelog.g.cs
+C:\Users\pawku\Desktop\Glitchcode\obj\Debug\Changelog.baml

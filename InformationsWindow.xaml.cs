@@ -73,5 +73,21 @@ namespace SkEditorRemake
         {
             
         }
+
+        private void ChangelogText_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            ChangelogWindow changelogWindow = new ChangelogWindow();
+            changelogWindow.ShowDialog();
+        }
+
+        private void ChangelogText_MouseEnter(object sender, MouseEventArgs e)
+        {
+            ChangelogText.TextDecorations = TextDecorations.Underline;
+        }
+
+        private void ChangelogText_MouseLeave(object sender, MouseEventArgs e)
+        {
+            ChangelogText.TextDecorations = null;
+        }
     }
 }

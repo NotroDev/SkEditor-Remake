@@ -17,6 +17,12 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media.Animation;
 using System.Xml;
+using YamlDotNet;
+using YamlDotNet.Core;
+using YamlDotNet.RepresentationModel;
+using System.Drawing;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace SkEditorRemake
 {
@@ -56,6 +62,26 @@ namespace SkEditorRemake
                         ICSharpCode.AvalonEdit.Highlighting.Xshd.HighlightingLoader.Load(reader, HighlightingManager.Instance);
                 }
             }
+
+            using (var reader = new StreamReader("test.yml"))
+            {
+                var yaml = new YamlStream();
+                yaml.Load(reader);
+
+                var mapping =
+                (YamlMappingNode)yaml.Documents[0].RootNode;
+
+                var item1 = (YamlScalarNode)mapping.Children[new YamlScalarNode("textBoxColor")];
+
+                string textBoxColor = item1.Value;
+
+                var converter = new System.Windows.Media.BrushConverter();
+                var brush = (System.Windows.Media.Brush) converter.ConvertFromString(textBoxColor);
+
+                //AvalonEdit.Background = brush;
+            }
+
+
 
             loadAddons();
         }
@@ -413,6 +439,18 @@ namespace SkEditorRemake
         {
             if (Properties.Settings.Default.Language == "English")
             {
+                setLanguage("English");
+            }
+            else if (Properties.Settings.Default.Language == "Polish")
+            {
+                setLanguage("Polish");
+            }
+        }
+
+        private void setLanguage(string language)
+        {
+            if (language == "English")
+            {
                 fileMenuStripItem.Header = "File";
                 editMenuStripItem.Header = "Edit";
                 otherMenuStripItem.Header = "Other";
@@ -434,7 +472,7 @@ namespace SkEditorRemake
                 settingsMenuItem.Header = "Settings";
                 informationsMenuItem.Header = "Informations";
             }
-            else if (Properties.Settings.Default.Language == "Polish")
+            else if (language == "Polish")
             {
                 fileMenuStripItem.Header = "Plik";
                 editMenuStripItem.Header = "Edycja";

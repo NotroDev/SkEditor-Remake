@@ -80,16 +80,12 @@
                 Margin="0,7,10,0" 
                 Width="20" Cursor="Hand" MouseLeftButtonDown="closeButton_Click" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top"/>
             <TextBlock FontFamily="/GlitchCode;component/Fonts/#Open Sans" FontSize="16" UseLayoutRounding="False" Margin="0,10,0,0" Text="SkEditor Remake" Foreground="#FFDDDDDD" HorizontalAlignment="Center" VerticalAlignment="Top" Height="22" RenderTransformOrigin="0.78,0.447" MouseLeftButtonDown="nameLabelMouseLeftButtonDown"/>
-            <ComboBox x:Name="languageComboBox" HorizontalAlignment="Left" Margin="10,108,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="languageComboBox_SelectionChanged">
+            <ComboBox x:Name="languageComboBox" HorizontalAlignment="Left" Margin="138,113,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="languageComboBox_SelectionChanged">
                 <ComboBoxItem Content="English"/>
                 <ComboBoxItem Content="Polski"/>
             </ComboBox>
-            <ComboBox x:Name="themeComboBox" HorizontalAlignment="Left" Margin="267,108,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="themeComboBox_SelectionChanged" IsEnabled="False" ToolTip="elo">
-                <ComboBoxItem Content="Light"/>
-                <ComboBoxItem Content="Dark"/>
-            </ComboBox>
-            <TextBlock x:Name="languageText" HorizontalAlignment="Left" Margin="10,87,0,0" TextWrapping="Wrap" Text="Language" VerticalAlignment="Top" Foreground="White"/>
-            <TextBlock x:Name="themeText" HorizontalAlignment="Left" Margin="267,87,0,0" TextWrapping="Wrap" Text="Theme" VerticalAlignment="Top" Foreground="White" MouseEnter="themeText_MouseEnter"/>
+            <TextBlock x:Name="languageText" HorizontalAlignment="Left" Margin="140,92,0,0" TextWrapping="Wrap" Text="Language" VerticalAlignment="Top" Foreground="White"/>
+            <TextBlock x:Name="versionText" HorizontalAlignment="Left" Margin="332,210,0,0" TextWrapping="Wrap" Text="v1.1-alpha" VerticalAlignment="Top" Foreground="#3FFFFFFF"/>
         </Grid>
     </Border>
 </Window>
