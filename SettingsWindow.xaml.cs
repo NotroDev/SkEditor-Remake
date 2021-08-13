@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using YamlDotNet.RepresentationModel;
 
 namespace SkEditorRemake
 {
@@ -41,7 +43,7 @@ namespace SkEditorRemake
         {
             Closing -= Window_Closing;
             e.Cancel = true;
-            var anim = new DoubleAnimation(0, (Duration)TimeSpan.FromSeconds(0.5));
+            var anim = new DoubleAnimation(0, (Duration)TimeSpan.FromSeconds(0.2));
             anim.Completed += (s, _) => this.Close();
             this.BeginAnimation(UIElement.OpacityProperty, anim);
         }
@@ -77,6 +79,49 @@ namespace SkEditorRemake
             {
                 languageComboBox.SelectedIndex = 1;
                 languageText.Text = "Język";
+            }
+            else if (Properties.Settings.Default.Language == "Custom")
+            {
+                ToolTip toolTip = new ToolTip();
+                switch (Properties.Settings.Default.Language)
+                {
+                    case "English":
+                        toolTip.Content = "To ustawienie nie może być zmienione, ponieważ wybrany jest język własny.";
+                        break;
+                    case "Polish":
+                        toolTip.Content = "This setting can't be changed, because selected is custom language.";
+                        break;
+                    case "Custom":
+                        toolTip.Content = getCustomLanguageText("customLangSelected");
+                        break;
+                }
+
+                languageText.ToolTip = toolTip;
+
+                ComboBoxItem customItem = new ComboBoxItem();
+                customItem.Content = "Custom";
+
+                languageComboBox.Items.Add(customItem);
+                languageComboBox.SelectedIndex = 2;
+                languageComboBox.IsEnabled = false;
+
+                languageText.Text = getCustomLanguageText("languageLabel");
+            }
+        }
+
+        public string getCustomLanguageText(string value)
+        {
+            using (var reader = new StreamReader("customLanguage.yml"))
+            {
+                var yaml = new YamlStream();
+                yaml.Load(reader);
+
+                var mapping =
+                (YamlMappingNode)yaml.Documents[0].RootNode;
+
+                var item = (YamlScalarNode)mapping.Children[new YamlScalarNode(value)];
+
+                return item.Value;
             }
         }
     }

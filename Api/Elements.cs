@@ -10,9 +10,5 @@ namespace SkEditorRemake.API
         {
             return MainWindow._Border;
         }
-        public static ICSharpCode.AvalonEdit.TextEditor TextEditor()
-        {
-            return MainWindow._TextEditor;
-        }
     }
 }

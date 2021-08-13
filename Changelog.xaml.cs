@@ -15,6 +15,9 @@ using System.Windows.Shapes;
 using System.IO;
 using System.IO.Compression;
 using System.Net;
+using Xam;
+using Xam.Animations;
+using YamlDotNet.RepresentationModel;
 
 namespace SkEditorRemake
 {
@@ -39,17 +42,43 @@ namespace SkEditorRemake
         {
             Closing -= Window_Closing;
             e.Cancel = true;
-            var anim = new DoubleAnimation(0, (Duration)TimeSpan.FromSeconds(0.5));
+            var anim = new DoubleAnimation(0, (Duration)TimeSpan.FromSeconds(0.2));
             anim.Completed += (s, _) => this.Close();
             this.BeginAnimation(UIElement.OpacityProperty, anim);
         }
 
         private void closeButton_Click(object sender, MouseButtonEventArgs e)
         {
-            Close();
+            this.Close();
         }
 
         private void changelogTextBlock_Loaded(object sender, RoutedEventArgs e)
+        {
+            switch (Properties.Settings.Default.Language)
+            {
+                case "English":
+                    changelogTextblock.Text = "Nothing here...";
+                    break;
+                case "Polish":
+                    changelogTextblock.Text = "Pustka...";
+                    break;
+                case "Custom":
+                    changelogTextblock.Text = getCustomLanguageText("changelogNotLoaded");
+                    break;
+            }
+        }
+
+        private void ChangelogText_MouseEnter(object sender, MouseEventArgs e)
+        {
+            loadText.TextDecorations = TextDecorations.Underline;
+        }
+
+        private void ChangelogText_MouseLeave(object sender, MouseEventArgs e)
+        {
+            loadText.TextDecorations = null;
+        }
+
+        private void ChangelogText_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             try
             {
@@ -60,7 +89,38 @@ namespace SkEditorRemake
             catch
             {
                 OKDialogWindow.showOKDialog("Nie masz internetu, przez co nie\n można wyświetlić changelogu.");
-                changelogTextblock.Text = "Pustka...";
+            }
+        }
+
+        public string getCustomLanguageText(string value)
+        {
+            using (var reader = new StreamReader("customLanguage.yml"))
+            {
+                var yaml = new YamlStream();
+                yaml.Load(reader);
+
+                var mapping =
+                (YamlMappingNode)yaml.Documents[0].RootNode;
+
+                var item = (YamlScalarNode)mapping.Children[new YamlScalarNode(value)];
+
+                return item.Value;
+            }
+        }
+
+        private void loadText_Loaded(object sender, RoutedEventArgs e)
+        {
+            switch (Properties.Settings.Default.Language)
+            {
+                case "English":
+                    loadText.Text = "Load";
+                    break;
+                case "Polish":
+                    loadText.Text = "Załaduj";
+                    break;
+                case "Custom":
+                    loadText.Text = getCustomLanguageText("loadChangelogLabel");
+                    break;
             }
         }
     }

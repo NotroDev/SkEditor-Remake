@@ -1,0 +1,45 @@
+﻿# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+enabled: false # Set true to enable custom language
+
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+fileMenuStripItem: "File"
+editMenuStripItem: "Edit"
+otherMenuStripItem: "Other"
+
+newFileMenuItem: "New file"
+openFileMenuItem: "Open"
+saveMenuItem: "Save"
+saveAsMenuItem: "Save as"
+publishMenuItem: "Publish code"
+closeMenuItem: "Close file"
+exitMenuItem: "Exit"
+
+undoMenuItem: "Undo"
+redoMenuItem: "Redo"
+cutMenuItem: "Cut"
+copyMenuItem: "Copy"
+pasteMenuItem: "Paste"
+selectAllMenuItem: "Select all"
+
+settingsMenuItem: "Settings"
+informationsMenuItem: "Informations"
+
+publishCodeLinkCopiedText: "Link has been copied"  
+noInternetConnection: "You don't have a internet connection" 
+fileLimitMessage: "Sorry, the program doesn't support opening more than 10 files at once for now."
+closeAppWarning: "Are you sure to close application?"
+closeFileWarning: "Are you sure to close current file?"
+
+newFileTabName: "New file"
+
+# -=-=-=-=-=-=-=-=-= Other Tabs =-=-=-=-=-=-=-=-=-=- #
+
+languageLabel: "Language"
+customLangSelected: "This setting can't be changed, because selected is custom language."
+
+changelogNotLoaded: "Nothing here..."
+loadChangelogLabel: "Load"
+
+# -=-=-=-=-=-=-=-=-= Other Tabs =-=-=-=-=-=-=-=-=-=- #

@@ -19,7 +19,7 @@
         ResizeMode="CanResize"
         Background="Transparent"
         WindowStyle="None"
-        AllowsTransparency="True" Activated="Window_Activated">
+        AllowsTransparency="True" Activated="Window_Activated" MouseLeftButtonDown="dragMove">
     <WindowChrome.WindowChrome>
         <WindowChrome GlassFrameThickness="0" CornerRadius="5" CaptionHeight="0" UseAeroCaptionButtons="False" ResizeBorderThickness="7"/>
     </WindowChrome.WindowChrome>
@@ -48,15 +48,24 @@
                 </Trigger>
             </ControlTemplate.Triggers>
         </ControlTemplate>
-        <Style x:Key="Buttons" TargetType="{x:Type Ellipse}">
-            <Setter Property="Opacity" Value="0.25" />
+        
+        <Style TargetType="{x:Type Thumb}"  x:Key="ScrollBarThumb">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Thumb}">
+                        <Border CornerRadius="2"
+                            Background="#595959" />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Opacity" Value="0.4" />
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Trigger.EnterActions>
                         <BeginStoryboard>
                             <Storyboard>
                                 <DoubleAnimation Storyboard.TargetProperty="Opacity"
-                  To="1" Duration="0:0:0.2" />
+                  To="0.75" Duration="0:0:0.2" />
                             </Storyboard>
                         </BeginStoryboard>
                     </Trigger.EnterActions>
@@ -64,34 +73,53 @@
                         <BeginStoryboard>
                             <Storyboard>
                                 <DoubleAnimation Storyboard.TargetProperty="Opacity"
-                  To="0.25" Duration="0:0:0.2" />
+                  To="0.4" Duration="0:0:0.2" />
                             </Storyboard>
                         </BeginStoryboard>
                     </Trigger.ExitActions>
                 </Trigger>
             </Style.Triggers>
         </Style>
+
+        <Style TargetType="ScrollBar">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ScrollBar}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.00001*" />
+                            </Grid.RowDefinitions>
+                            <Border Grid.RowSpan="1" />
+                            <Track x:Name="PART_Track" Grid.Row="1" IsDirectionReversed="true">
+                                <Track.Thumb>
+                                    <Thumb Style="{StaticResource ScrollBarThumb}" Margin="1,0,1,0"/>
+                                </Track.Thumb>
+                            </Track>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Window.CommandBindings>
         <CommandBinding Command="ApplicationCommands.New" Executed="shortCutNewButton_Click"/>
         <CommandBinding Command="ApplicationCommands.Open" Executed="shortCutOpenButton_Click"/>
         <CommandBinding Command="ApplicationCommands.Save" Executed="shortCutSaveButton_Click"/>
-        <!--
-        <CommandBinding Command="ApplicationCommands.PublishCode" Executed="shortCutPublishCodeButton_Click"/>
-        -->
+        <CommandBinding Command="ApplicationCommands.SaveAs" Executed="shortCutSaveAsButton_Click"/>
         <CommandBinding Command="ApplicationCommands.Close" Executed="shortCutCloseButton_Click"/>
     </Window.CommandBindings>
     <Window.InputBindings>
         <KeyBinding Modifiers="Ctrl" Key="N" Command="ApplicationCommands.New"/>
         <KeyBinding Modifiers="Ctrl" Key="O" Command="ApplicationCommands.Open"/>
         <KeyBinding Modifiers="Ctrl" Key="S" Command="ApplicationCommands.Save"/>
+        <KeyBinding Modifiers="Ctrl+Shift" Key="S" Command="ApplicationCommands.SaveAs"/>
         <!--
         <KeyBinding Modifiers="Ctrl" Key="P" Command="ApplicationCommands.Save"/>
         -->
         <KeyBinding Modifiers="Ctrl" Key="W" Command="ApplicationCommands.Close"/>
     </Window.InputBindings>
-    <Border x:Name="Border" Background="#2C2F33" CornerRadius="10">
-        <Grid x:Name="editorGrid">
+    <Border x:Name="Border" Background="#2C2F33" CornerRadius="10" MouseLeftButtonDown="dragMove">
+        <Grid x:Name="editorGrid" MouseLeftButtonDown="dragMove">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="587*"/>
                 <ColumnDefinition Width="213*"/>
@@ -100,20 +128,15 @@
                 <RowDefinition Height="88*"/>
                 <RowDefinition Height="137*"/>
             </Grid.RowDefinitions>
-            <Image x:Name="SkEditorLogo" 
-                Source="Images/SkEditor.png"
-                RenderOptions.BitmapScalingMode="HighQuality"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Left" 
-                RenderTransformOrigin="28.887,-0.097" 
-                Height="27" 
-                Margin="10,4,0,0" 
-                Width="28" Cursor="" ToolTip="" MouseEnter="SkEditorLogo_MouseEnter"/>
-            <Menu x:Name="MenuStrip" Background="Transparent" Foreground="White" IsMainMenu="True" Margin="41,10,258,143" FontFamily="OpenSans" MinHeight="23">
+            <Image x:Name="SkEditorLogo" Source="Images/SkEditor.png" VerticalAlignment="Top" HorizontalAlignment="Left"
+             RenderTransformOrigin="50.887,-0.097" Height="27" Margin="10,7,0,0" Width="27"
+             RenderOptions.BitmapScalingMode="HighQuality" MouseEnter="SkEditorLogo_MouseEnter"/>
+            <Menu x:Name="MenuStrip" Background="Transparent" Foreground="White" IsMainMenu="True" Margin="42,11,327,142" FontFamily="OpenSans" MinHeight="23">
                 <MenuItem x:Name="fileMenuStripItem" Foreground="White" Header="File" Template="{StaticResource MenuItem}">
                     <MenuItem x:Name="newFileMenuItem" Cursor="Hand" Foreground="White" Header="New" Background="#2C2F33" BorderBrush="#2C2F33" Click="newButton_Click" InputGestureText="Ctrl+N"/>
                     <MenuItem x:Name="openFileMenuItem" Cursor="Hand" Foreground="White" Header="Open" Background="#2C2F33" BorderBrush="#2C2F33" Click="openButton_Click" InputGestureText="Ctrl+O"/>
                     <MenuItem x:Name="saveMenuItem" Cursor="Hand" Foreground="White" Header="Save" Background="#2C2F33" BorderBrush="#2C2F33" Click="saveButton_Click" InputGestureText="Ctrl+S"/>
+                    <MenuItem x:Name="saveAsMenuItem" Cursor="Hand" Foreground="White" Header="Save As" Background="#2C2F33" BorderBrush="#2C2F33" Click="saveAsButton_Click" InputGestureText="Ctrl+Shift+S"/>
                     <Separator/>
                     <MenuItem x:Name="publishMenuItem" Cursor="Hand" Foreground="White" Header="Publish Code" Background="#2C2F33" BorderBrush="#2C2F33" Click="publishCodeButton_Click"/>
                     <Separator/>
@@ -135,42 +158,59 @@
                     <MenuItem x:Name="informationsMenuItem" Header="About" Click="informationsMenuItem_Click"/>
                 </MenuItem>
             </Menu>
-            <avalonedit:TextEditor IsEnabled="True" Foreground="White" Background="#23272A" x:Name="AvalonEdit" MinHeight="403" Margin="10,37,10,10" MinWidth="780" FontFamily="/SkEditorRemake;component/Fonts/#Ubuntu Mono" FontSize="16" VerticalScrollBarVisibility="Auto" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" ShowLineNumbers="True" WordWrap="True" BorderBrush="#FF2C2F33" Grid.RowSpan="2" Grid.ColumnSpan="2" Cursor="None" LineNumbersForeground="#FF546E7A">
-                <avalonedit:TextEditor.ContextMenu>
-                    <ContextMenu x:Name="ContextMenu" Template="{StaticResource ContextMenu}" BorderBrush="#FF2C2F33" Foreground="White" HasDropShadow="False" FontFamily="Open Sans" OpacityMask="#FF2C2F33">
-                        <MenuItem Cursor="Hand" Header="Undo" Background="#FF2C2F33" BorderBrush="#FF2C2F33" Click="undoButton_Click" InputGestureText="Ctrl+Z"/>
-                        <MenuItem Cursor="Hand" Header="Redo" Background="#FF2C2F33" BorderBrush="#FF2C2F33" Click="redoButton_Click" InputGestureText="Ctrl+Y"/>
-                        <Separator/>
-                        <MenuItem Cursor="Hand" Header="Cut" Background="#FF2C2F33" BorderBrush="#FF2C2F33" Click="cutButton_Click" InputGestureText="Ctrl+X"/>
-                        <MenuItem Cursor="Hand" Header="Copy" Background="#FF2C2F33" BorderBrush="#FF2C2F33" Click="copyButton_Click" InputGestureText="Ctrl+C"/>
-                        <MenuItem Cursor="Hand" Header="Paste" Background="#FF2C2F33" BorderBrush="#FF2C2F33" Click="pasteButton_Click" InputGestureText="Ctrl+V"/>
-                        <Separator/>
-                        <MenuItem Cursor="Hand" Header="Select all" Background="#FF2C2F33" BorderBrush="#FF2C2F33" Click="selectAllButton_Click" InputGestureText="Ctrl+A"/>
-                    </ContextMenu>
-                </avalonedit:TextEditor.ContextMenu>
-            </avalonedit:TextEditor>
-            <TextBlock x:Name="nameTextBlock" FontFamily="Open Sans" FontSize="16" UseLayoutRounding="False" Margin="334.166,7.673,133.834,0" Text="SkEditor Remake" Foreground="#FFEEEEEE" HorizontalAlignment="Center" VerticalAlignment="Top" Height="21" Width="119" MouseLeftButtonDown="nameLabelMouseLeftButtonDown"/>
-            <Image 
+            <Image x:Name="closeAppButton" 
                 Source="Images/close2.png" 
                 RenderOptions.BitmapScalingMode="HighQuality"
                 RenderTransformOrigin="28.887,-0.097" 
                 Height="20" 
                 Margin="0,7,10,0" 
-                Width="20" Cursor="Hand" MouseLeftButtonDown="closeButton_Click" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <Image 
+                Width="20" Cursor="Hand" MouseLeftButtonDown="closeAppButton_Click" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" MouseEnter="closeButton_MouseEnter" MouseLeave="closeButton_MouseLeave"/>
+            <Image x:Name="minimizeButton" 
                 Source="Images/minimize2.png" 
                 RenderOptions.BitmapScalingMode="HighQuality"
                 RenderTransformOrigin="28.887,-0.097" 
                 Height="20" 
                 Margin="0,7,60,0" 
-                Width="20" Cursor="Hand" MouseLeftButtonDown="minimizeButton_Click" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <Image 
+                Width="20" Cursor="Hand" MouseLeftButtonDown="minimizeButton_Click" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" MouseEnter="minimizeButton_MouseEnter" MouseLeave="minimizeButton_MouseLeave"/>
+            <Image x:Name="maximizeButton" 
                 Source="Images/maximize2.png" 
                 RenderOptions.BitmapScalingMode="HighQuality"
                 RenderTransformOrigin="28.887,-0.097" 
                 Height="20" 
                 Margin="0,7,35,0" 
-                Width="20" Cursor="Hand" MouseLeftButtonDown="maximizeButton_Click" Grid.Column="1" Opacity="0.98" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                Width="20" Cursor="Hand" MouseLeftButtonDown="maximizeButton_Click" Grid.Column="1" Opacity="0.98" HorizontalAlignment="Right" VerticalAlignment="Top" MouseEnter="maximizeButton_MouseEnter" MouseLeave="maximizeButton_MouseLeave"/>
+
+            <TabControl x:Name="tabControl1" Margin="10,38,10,10" Background="#1F1F1F" Grid.ColumnSpan="2" Grid.RowSpan="2" SelectionChanged="tabControl1_SelectionChanged" BorderBrush="{x:Null}" BorderThickness="0">
+                <TabControl.Resources>
+                    <Style TargetType="TabItem">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="TabItem">
+                                    <Grid Name="Panel">
+                                        <Border Name="Border" BorderBrush="Gainsboro" CornerRadius="4,4,0,0" Margin="2,0">
+                                            <ContentPresenter x:Name="ContentSite"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        ContentSource="Header"
+                                        Margin="10,2"/>
+                                        </Border>
+                                    </Grid>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsSelected" Value="False">
+                                            <Setter TargetName="Panel" Property="Background" Value="#1F1F1F" />
+                                            <Setter TargetName="Panel" Property="TextBlock.Foreground" Value="White"></Setter>
+                                        </Trigger>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter TargetName="Panel" Property="Background" Value="#FF4C74E0" />
+                                            <Setter TargetName="Panel" Property="TextBlock.Foreground" Value="White"></Setter>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </TabControl.Resources>
+            </TabControl>
         </Grid>
     </Border>
 </Window>

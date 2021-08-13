@@ -13,13 +13,13 @@
         Background="Transparent" 
         AllowsTransparency="True"
         WindowStyle="None" 
-        Width="256" 
-        Height="128">
+        Width="268.146" 
+        Height="139.679">
     <Window.Triggers>
         <EventTrigger RoutedEvent="Window.Loaded">
             <BeginStoryboard>
                 <Storyboard>
-                    <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.5" FillBehavior="HoldEnd" />
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.2" FillBehavior="HoldEnd" />
                 </Storyboard>
             </BeginStoryboard>
         </EventTrigger>
@@ -79,9 +79,8 @@
                 Height="20" 
                 Margin="0,7,10,0" 
                 Width="20" Cursor="Hand" MouseLeftButtonDown="closeButton_Click" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBlock FontFamily="/GlitchCode;component/Fonts/#Open Sans" FontSize="16" UseLayoutRounding="False" Margin="65,10,65,0" Text="SkEditor Remake" Foreground="#FFDDDDDD" VerticalAlignment="Top" Height="22" RenderTransformOrigin="0.78,0.447"/>
-            <Label Name="TextLabel" MinWidth="236" MinHeight="55" FontFamily="/GlitchCode;component/Fonts/#Open Sans" Content="None" Foreground="White" Margin="10,37,10,36" FontSize="14" Background="Transparent"/>
-            <Button IsCancel="True" Template="{StaticResource Button1}" Margin="193,97,10,8" Content="OK" FontFamily="/GlitchCode;component/Fonts/#Open Sans" Foreground="White"/>
+            <TextBlock Name="TextLabel" MinWidth="236" MinHeight="55" FontFamily="/GlitchCode;component/Fonts/#Open Sans" Text="None" Foreground="White" Margin="10,36,10,35" FontSize="13" Background="Transparent" TextWrapping="Wrap"/>
+            <Button IsCancel="True" Template="{StaticResource Button1}" Margin="207,111,10,8" Content="OK" FontFamily="/GlitchCode;component/Fonts/#Open Sans" Foreground="White"/>
         </Grid>
     </Border>
 </Window>

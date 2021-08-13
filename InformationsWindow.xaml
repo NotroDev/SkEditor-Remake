@@ -19,7 +19,7 @@
         <EventTrigger RoutedEvent="Window.Loaded">
             <BeginStoryboard>
                 <Storyboard>
-                    <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.5" FillBehavior="HoldEnd" />
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.2" FillBehavior="HoldEnd" />
                 </Storyboard>
             </BeginStoryboard>
         </EventTrigger>

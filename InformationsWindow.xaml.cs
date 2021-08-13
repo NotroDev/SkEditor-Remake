@@ -42,7 +42,7 @@ namespace SkEditorRemake
         {
             Closing -= Window_Closing;
             e.Cancel = true;
-            var anim = new DoubleAnimation(0, (Duration)TimeSpan.FromSeconds(0.5));
+            var anim = new DoubleAnimation(0, (Duration)TimeSpan.FromSeconds(0.2));
             anim.Completed += (s, _) => this.Close();
             this.BeginAnimation(UIElement.OpacityProperty, anim);
         }
@@ -54,19 +54,19 @@ namespace SkEditorRemake
 
         private void ChangeLanguage()
         {
-            if (Properties.Settings.Default.Language == "English")
-            {
-                GeneralInfoText.Text = "General info";
-                GeneralInfoSubText.Text = "The program was created by Notro. The syntax highlighting is inspired by the highlighting from code.skript.pl site. The program is in an early version. Much will change for the better, and if I can access a few things, I'll be able to introduce some great features.";
-                ContactText.Text = "Contact";
-                ContactSubText.Text = "If you want to contact me, send me a Discord friend request - Notro#3737";
-            }
-            else if (Properties.Settings.Default.Language == "Polish")
+            if (Properties.Settings.Default.Language == "Polish")
             {
                 GeneralInfoText.Text = "Podstawowe informacje";
                 GeneralInfoSubText.Text = "Program został stworzony przez Notro. Podświetlanie składni jest inspirowane podświetlaniem ze strony code.skript.pl. Program jest we wczesnej wersji. Wiele zmieni się na lepsze, a jeśli uda mi się uzyskać dostęp do kilku rzeczy, będę mógł wprowadzić kilka fajnych funkcji.";
                 ContactText.Text = "Kontakt";
                 ContactSubText.Text = "Jeśli chcesz się ze mną skontaktować, wyślij mi zaproszenie do znajomych na Discordzie - Notro#3737";
+            }
+            else
+            {
+                GeneralInfoText.Text = "General info";
+                GeneralInfoSubText.Text = "The program was created by Notro. The syntax highlighting is inspired by the highlighting from code.skript.pl site. The program is in an early version. Much will change for the better, and if I can access a few things, I'll be able to introduce some great features.";
+                ContactText.Text = "Contact";
+                ContactSubText.Text = "If you want to contact me, send me a Discord friend request - Notro#3737";
             }
         }
         private void ChangeTheme()

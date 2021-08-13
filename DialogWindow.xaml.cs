@@ -53,7 +53,7 @@ namespace SkEditorRemake
         public static bool showDialog(string text)
         {
             DialogWindow dialog = new DialogWindow();
-            dialog.TextLabel.Content = text;
+            dialog.TextLabel.Text = text;
             return (bool)dialog.ShowDialog();
         }
 
@@ -77,7 +77,7 @@ namespace SkEditorRemake
             {
                 Closing -= Window_Closing;
                 e.Cancel = true;
-                var anim = new DoubleAnimation(0, (Duration)TimeSpan.FromSeconds(0.5));
+                var anim = new DoubleAnimation(0, (Duration)TimeSpan.FromSeconds(0.2));
                 anim.Completed += (s, _) => this.Close();
                 this.BeginAnimation(UIElement.OpacityProperty, anim);
             }
