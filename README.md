@@ -1,4 +1,5 @@
--# SkEditor Remake
+# SkEditor Remake
+
 [![GitHub release](https://img.shields.io/github/v/tag/NotroDev/SkEditor-Remake.svg?&label=latest%20release)](../../releases/latest)
 [![GitHub release](https://img.shields.io/github/issues/NotroDev/SkEditor-Remake)](../../issues)
 
