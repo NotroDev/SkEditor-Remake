@@ -24,6 +24,9 @@
         <WindowChrome GlassFrameThickness="0" CornerRadius="5" CaptionHeight="0" UseAeroCaptionButtons="False" ResizeBorderThickness="7"/>
     </WindowChrome.WindowChrome>
     <Window.Resources>
+        <Style x:Key="Roboto-Mono">
+            <Setter Property="TextElement.FontFamily" Value="Fonts/#Roboto Mono" />
+        </Style>
         <ControlTemplate x:Key="ContextMenu" TargetType="{x:Type ContextMenu}">
             <Border CornerRadius="5" BorderBrush="#FF2C2F33" BorderThickness="1" Background="#FF2C2F33" SnapsToDevicePixels="True">
                 <ItemsPresenter/>

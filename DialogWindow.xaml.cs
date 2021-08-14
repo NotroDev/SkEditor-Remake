@@ -82,5 +82,15 @@ namespace SkEditorRemake
                 this.BeginAnimation(UIElement.OpacityProperty, anim);
             }
         }
+
+        private void closeButton_MouseEnter(object sender, MouseEventArgs e)
+        {
+            closeButton.Opacity = 0.7;
+        }
+
+        private void closeButton_MouseLeave(object sender, MouseEventArgs e)
+        {
+            closeButton.Opacity = 1;
+        }
     }
 }

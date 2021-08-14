@@ -72,13 +72,13 @@
                 Height="26" 
                 Margin="10,10,0,0" 
                 Width="23" Grid.RowSpan="2"/>
-            <Image 
+            <Image x:Name="closeButton" 
                 Source="Images/close2.png" 
                 RenderOptions.BitmapScalingMode="HighQuality"
                 RenderTransformOrigin="28.887,-0.097" 
                 Height="20" 
                 Margin="0,7,10,0" 
-                Width="20" Cursor="Hand" MouseLeftButtonDown="closeButton_Click" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                Width="20" Cursor="Hand" MouseLeftButtonDown="closeButton_Click" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" MouseEnter="closeButton_MouseEnter" MouseLeave="closeButton_MouseLeave"/>
             <TextBlock Name="TextLabel" MinWidth="236" MinHeight="55" FontFamily="/GlitchCode;component/Fonts/#Open Sans" Text="None" Foreground="White" Margin="10,37,10,36" FontSize="14" Background="Transparent" TextWrapping="Wrap"/>
             <Button x:Name="noButton" IsCancel="True" Template="{StaticResource Button1}" Margin="193,97,10,8" Content="No" FontFamily="/GlitchCode;component/Fonts/#Open Sans" Foreground="White"/>
             <Button x:Name="yesButton" IsDefault="True" Template="{StaticResource Button1}" Margin="135,97,68,8" Content="Yes" FontFamily="/GlitchCode;component/Fonts/#Open Sans" Foreground="White" Click="yesButton_Click"/>

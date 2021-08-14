@@ -61,6 +61,57 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+        <Style TargetType="{x:Type Thumb}"  x:Key="ScrollBarThumb">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Thumb}">
+                        <Border CornerRadius="2"
+                            Background="#595959" />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Opacity" Value="0.4" />
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                  To="0.75" Duration="0:0:0.2" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                    <Trigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                  To="0.4" Duration="0:0:0.2" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.ExitActions>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="ScrollBar">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ScrollBar}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.00001*" />
+                            </Grid.RowDefinitions>
+                            <Border Grid.RowSpan="1" />
+                            <Track x:Name="PART_Track" Grid.Row="1" IsDirectionReversed="true">
+                                <Track.Thumb>
+                                    <Thumb Style="{StaticResource ScrollBarThumb}" Margin="1,0,1,0"/>
+                                </Track.Thumb>
+                            </Track>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Border Background="#2C2F33" CornerRadius="10">
         <Grid>
@@ -73,14 +124,16 @@
                 Height="26" 
                 Margin="10,10,0,0" 
                 Width="23" Grid.RowSpan="2"/>
-            <Image 
+            <Image x:Name="closeButton" 
                 Source="Images/close2.png" 
                 RenderOptions.BitmapScalingMode="HighQuality"
                 RenderTransformOrigin="28.887,-0.097" 
                 Height="20" 
                 Margin="0,7,10,0" 
-                Width="20" Cursor="Hand" MouseLeftButtonDown="closeButton_Click" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBlock x:Name="changelogTextblock" FontFamily="/SkEditorRemake;component/Fonts/#Open Sans" HorizontalAlignment="Left" Margin="10,80,0,0" TextWrapping="Wrap" Text="No internet connection" VerticalAlignment="Top" Height="237" Width="531" Foreground="White" FontSize="15" Loaded="changelogTextBlock_Loaded"/>
+                Width="20" Cursor="Hand" MouseLeftButtonDown="closeButton_Click" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" MouseEnter="closeButton_MouseEnter" MouseLeave="closeButton_MouseLeave"/>
+            <ScrollViewer CanContentScroll="True" Margin="10,53,10,21">
+                <TextBlock x:Name="changelogTextblock" FontFamily="/SkEditorRemake;component/Fonts/#Open Sans" HorizontalAlignment="Left" TextWrapping="Wrap" Text="No internet connection" VerticalAlignment="Top" Foreground="White" FontSize="15" Loaded="changelogTextBlock_Loaded" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
+            </ScrollViewer>
             <TextBlock x:Name="loadText" HorizontalAlignment="Left" Margin="10,317,0,0" TextWrapping="Wrap" Text="Load" VerticalAlignment="Top" Foreground="#FF919BCD" FontFamily="/SkEditorRemake;component/Fonts/#Open Sans" FontSize="12" Width="168" MouseLeftButtonDown="ChangelogText_MouseLeftButtonDown" MouseEnter="ChangelogText_MouseEnter" MouseLeave="ChangelogText_MouseLeave" Loaded="loadText_Loaded"/>
         </Grid>
     </Border>

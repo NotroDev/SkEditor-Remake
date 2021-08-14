@@ -72,13 +72,13 @@
                 Height="26" 
                 Margin="10,10,0,0" 
                 Width="23" Grid.RowSpan="2"/>
-            <Image 
+            <Image x:Name="closeButton" 
                 Source="Images/close2.png" 
                 RenderOptions.BitmapScalingMode="HighQuality"
                 RenderTransformOrigin="28.887,-0.097" 
                 Height="20" 
                 Margin="0,7,10,0" 
-                Width="20" Cursor="Hand" MouseLeftButtonDown="closeButton_Click" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                Width="20" Cursor="Hand" MouseLeftButtonDown="closeButton_Click" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" MouseEnter="closeButton_MouseEnter" MouseLeave="closeButton_MouseLeave"/>
             <TextBlock FontFamily="Open Sans" FontSize="16" UseLayoutRounding="False" Margin="0,10,0,0" Text="SkEditor Remake" Foreground="#FFDDDDDD" HorizontalAlignment="Center" VerticalAlignment="Top" Height="22" RenderTransformOrigin="0.78,0.447" MouseLeftButtonDown="nameLabelMouseLeftButtonDown"/>
             <TextBlock x:Name="ContactText" HorizontalAlignment="Left" Margin="10,181,0,0" TextWrapping="Wrap" Text="Contact" VerticalAlignment="Top" Foreground="White" FontFamily="/SkEditorRemake;component/Fonts/#Open Sans" FontSize="16" Width="377"/>
             <TextBlock x:Name="ContactSubText" HorizontalAlignment="Left" Margin="10,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontFamily="/SkEditorRemake;component/Fonts/#Open Sans" Height="40" Width="377"><Run Text="Subtext"/><InlineUIContainer>

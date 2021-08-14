@@ -1,0 +1,27 @@
+﻿<SyntaxDefinition name="C#" extensions="" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
+  <Color name="Comment" foreground="#FF008000" />
+  <Color name="String" foreground="#FF0000FF" />
+  <RuleSet>
+    <Span color="Comment" begin="//" />
+    <Span color="Comment" begin="/\*" end="\*/" multiline="true" />
+    <Span color="String">
+      <Begin>"</Begin>
+      <End>"</End>
+      <RuleSet>
+        <Span begin="\\" end="." />
+      </RuleSet>
+    </Span>
+    <Keywords foreground="#FF0000FF" fontWeight="bold">
+      <Word>if</Word>
+      <Word>else</Word>
+    </Keywords>
+    <Rule foreground="#FF00008B">
+      \b0[xX][0-9a-fA-F]+  # hex number
+      |    \b
+      (    \d+(\.[0-9]+)?   #number with optional floating point
+      |    \.[0-9]+         #or just starting with floating point
+      )
+      ([eE][+-]?[0-9]+)? # optional exponent
+    </Rule>
+  </RuleSet>
+</SyntaxDefinition>

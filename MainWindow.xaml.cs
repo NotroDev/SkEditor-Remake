@@ -605,8 +605,8 @@ namespace SkEditorRemake
 
                 GetCurrentTextBox().Background = new SolidColorBrush(System.Windows.Media.Color.FromRgb(35, 39, 42));
                 GetCurrentTextBox().Foreground = new SolidColorBrush(System.Windows.Media.Color.FromRgb(255, 255, 255));
-                GetCurrentTextBox().FontFamily = new System.Windows.Media.FontFamily("/SkEditorRemake;component/Fonts/#Ubuntu Mono");
-                GetCurrentTextBox().FontSize = 16;
+                GetCurrentTextBox().FontFamily = new System.Windows.Media.FontFamily(new Uri("pack://application:,,,/"), "./Fonts/#Roboto Mono");
+                GetCurrentTextBox().FontSize = 14;
                 GetCurrentTextBox().VerticalScrollBarVisibility = ScrollBarVisibility.Auto;
                 GetCurrentTextBox().VerticalContentAlignment = VerticalAlignment.Stretch;
                 GetCurrentTextBox().HorizontalContentAlignment = HorizontalAlignment.Stretch;

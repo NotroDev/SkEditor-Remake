@@ -124,7 +124,8 @@
     <Compile Include="SettingsWindow.xaml.cs">
       <DependentUpon>SettingsWindow.xaml</DependentUpon>
     </Compile>
-    <Resource Include="Fonts\UbuntuMono-Regular.ttf" />
+    <Resource Include="Fonts\RobotoMono.ttf" />
+    <Resource Include="Fonts\RobotoMono-Light.ttf" />
     <None Include="SkriptHighlighting.xshd">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
